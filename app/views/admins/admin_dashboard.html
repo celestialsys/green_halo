@@ -1,0 +1,933 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WasteTracking System | Admin | Statistics | Recycling Totals</title>
+
+<link rel="shortcut icon" href="../img/wastetrac-meta-icon.png"> 
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/datepicker.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+ <!--<link rel="stylesheet" type="text/css" media="screen" href="../css/fonts.css">-->
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/default-style.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/stats-page.css">
+
+ <script type="text/javascript" src="../js/jquery-1.10.0.min.js"></script>
+ <script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+ <script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+
+
+
+<body>
+
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------ -->
+    <!-- header -->
+    <!-- ------ -->
+    
+    <div id="global-header">
+    	<div class="header-logo-and-support">
+        	<div class="column-50 no-border" style="font-size:12px !important;">
+            	<img src="../img/logo-sml.png" width="140" height="34" style="margin-right: 10px;"> LOGGED IN:  <b> Dean Rodatos, Director</b>
+            </div>
+            <div class="column-50 no-border" align="right" style="font-size:12px !important;">
+            	<div>Live Help / Tech Support   -   888 525 1301</div>
+            </div>
+        </div>
+       
+    </div>
+    	 <!-- global nav -->
+        <div class="header-nav">
+          <div style="max-width:1100px; margin:0 auto;">
+          	<!--<div class="grid-10 tab">
+            	<a class="link-regular" href="#">
+                    <span class="tab-default-right-shadow">
+                        <span style="position: relative; top: 15px;">
+                        	<img src="../img/logo-sml.png" width="140" height="34" style="margin: 2px 0px 0px 0px;">
+                        </span>
+                    </span>
+                </a>
+            </div>-->
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-dashboard.html">
+                    <span class="tab-selected nav-statistics-selected">
+                        <span style="position: relative; top: 44px;">CREATE</span><br/>
+                        <img class="global-nav-add" src="../img/create-hover.png">
+                    </span>
+                </a>
+            </div>
+        	<div class="grid-10 tab">
+            	<a class="link-regular" href="admin-add-data.html">
+                    <span class="tab-default-right-shadow nav-home">
+                        <span style="position: relative; top: 44px;">ADD DATA</span><br/>
+                        <img class="global-nav-projects" src="../img/adddata.png"><br/>
+                        <img class="global-nav-projects-hover" src="../img/adddata-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="dashboard">
+                    <span class="tab-default-right-shadow nav-statistics">
+                        <span style="position: relative; top: 44px;">STATISTICS</span><br/>
+                        <img class="global-nav-statistics" src="../img/statistics.png"><br/>
+                        <img class="global-nav-statistics-hover" src="../img/statistics-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-tools.html">
+                    <span class="tab-default-left-shadow nav-settings">
+                        <span style="position: relative; top: 44px;">TOOLS</span><br/>
+                        <img class="global-nav-settings" src="../img/tools.png"><br/>
+                        <img class="global-nav-settings-hover" src="../img/tools-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-organise.html">
+                    <span class="tab-default nav-recycler-search">
+                        <span style="position: relative; top: 44px;">ORGANIZE</span><br/>
+                        <img class="global-nav-recycler-search" src="../img/organise.png"><br/>
+                        <img class="global-nav-recycler-search-hover" src="../img/organise-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-bragit.html">
+                    <span class="tab-default nav-suggestions">
+                        <span style="position: relative; top: 44px;">BRAG IT</span><br/>
+                        <img class="global-nav-suggestions" src="../img/bragit.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-suggestions-hover" src="../img/bragit-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-portal.html">
+                    <span class="tab-default nav-report-bug">
+                        <span style="position: relative; top: 44px;">PORTAL</span><br/>
+                        <img class="global-nav-report-bug" src="../img/portal.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-report-bug-hover" src="../img/portal-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-settings.html">
+                    <span class="tab-default nav-live-help">
+                        <span style="position: relative; top: 44px;">SETTINGS</span><br/>
+                        <img class="global-nav-live-help" src="../img/settings.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-live-help-hover" src="../img/settings-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="../index.html">
+                    <span class="tab-default nav-log-out">
+                        <span style="position: relative; top: 44px;">LOG OUT</span><br/>
+                        <img class="global-nav-log-out" src="../img/logout.png"><br/>
+                        <img class="global-nav-log-out-hover" src="../img/logout-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+          </div>
+        </div>
+    <!-- ---------- -->
+    <!-- end header -->
+    <!-- ---------- -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------------------ -->
+    <!-- statistics section -->
+    <!-- ------------------ -->
+    
+    <!-- main top bar -->
+    
+    
+    
+  <!---dashboard-->
+  <div class="dashboard">
+  		 <div class="dashboard-left" align="left">
+                        <a href="#"><span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#e51836;">Dashboard</span></a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="admin-overview.html">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;">Overview</span>
+                        </a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="admin-create.html">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;">Create</span>
+                        </a>
+                    </div>
+  </div>
+    <!-- main tabs -->
+    <div id="main-content">
+    	<div class="recycle-text" align="left">
+        	<p><b>Recycling Totals</b></p>
+        </div>
+        	<div class="right-buttons" align="right">
+            	<form action="" method="" name="">
+                <input type="button" value="LAST 1YR" class="first-button" style="background-color:#FFFFFF;">
+                 <input type="button" value="LAST 6MO" class="first-button">
+                  <input type="button" value="LAST 1MO" class="first-button">
+                   <input type="button" value="LAST WK" class="first-button">
+                </form>
+            </div>
+        <div class="top-content">
+        	<div class="recycle-total">
+             Recycled Totals<br>
+                    <div style="padding:5px 0px 0 0;" align="center">
+                    	<!--<img src="../img/bar-green.png" />-->
+                        <div class="progress" style="height:60px; background-color:#d4f4e9; width:90%;">
+    							<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="" aria-valuemax="100" style="width:87%; background-color:#33cc99; padding-top:20px;">
+      										87%
+    							</div>
+  						</div>
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#33cc99; font-size:24px; font-weight:bold;">34,520,601.25</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:24px; font-weight:bold;">87%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>average recycled </i></span>
+                    </div>
+            </div>
+            	
+        </div>
+        
+        <div class="top-content">
+        	<div class="recycle-total">
+             Disposed Totals<br>
+                    <div style="padding:5px 0px 0 0;" align="center">
+                    	
+                        <div class="progress" style="height:60px; background-color:#f9ced4; width:90%;">
+    							<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="" aria-valuemax="100" style="width:10%; background-color:#e51837; padding-top:20px;">
+      										10%
+    							</div>
+                                
+                                
+  						</div>
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#d90d21; font-size:24px; font-weight:bold;">205,403.52</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:24px; font-weight:bold;">10%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>average reused </i></span>
+                    </div>
+            </div>
+            	
+        </div>
+        
+        
+        <div class="top-content">
+        	<div class="recycle-total">
+             <p>Diversion Rate</p>
+             	<!-- chart line -->
+               
+                    <div id="chart-line-container">
+                        <div id="chart-line"></div>
+                    </div>
+               		<div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#6c6c6c; font-size:24px; font-weight:bold;">43,502.16</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:24px; font-weight:bold;">87%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>diverted from landfill </i></span>
+                    </div>
+            	
+                <!-- end chart line -->
+            </div>
+            	
+        </div>
+    
+        
+    </div>
+  <div class="dashboard">
+  		 <div class="dashboard-left" align="left">
+                        <a href="#"><span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#4f4f4f;">Pending</span></a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="#">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#4f4f4f;">Submitted</span>
+                        </a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="#">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#e51836;">Active</span>
+                        </a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="#">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#4f4f4f;">Final</span>
+                        </a>
+                        <span style="top:13px;position: relative;">|</span>
+                        <a href="#">
+                            <span style="font-size: 12px; margin: 0px 6px 0px 2px; position: relative; top: 13px;color:#4f4f4f;">For Clients</span>
+                        </a>
+                    </div>
+  </div>   
+  <!--content-->  
+<div class="body-content">
+	<div class="recycle-text" align="left">
+        <p><b>Boston Properties</b></p>
+     </div>
+     
+     	<div id="project-title">
+        <ul><li>Project Name</li>
+        <li>Diverted from Landfill</li>
+        <li>Return on Recycling(ROR)</li>
+        </ul>
+        </div>
+        <!--first block-->
+        <div class="first-project">
+        	<div class="project-content">
+            	<div class="project-text" align="left">
+                <p style="font-size:16px;"><b>1.Building 1 </b></p>
+                <p>1234 Really Long Street Name Address</p>
+                <p>San Francisco,CA 94131</p>
+            	</div>
+                	<div class="project-right-buttons" align="left">
+            	<form action="" method="" name="">
+                <input type="button" value="ADD DATA" class="project-first-button" style="background-color:#1c1c1c;">
+                 <input type="button" value="VIEW DETAILS" class="project-first-button">
+                     </form>
+                     </div>
+            </div>
+            		 
+        <div class="project-top-content">
+        	<div class="project-recycle-total">
+             		<div style="padding:0;" align="center">
+                    	<!--<img src="../img/bar-green.png" />-->
+                        <div class="progress" style="height:30px; background-color:#d4f4e9; width:90%;">
+    							<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="" aria-valuemax="100" style="width:60%; background-color:#33cc99; padding-top:05px;">
+      										60%
+    							</div>
+                                <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="" aria-valuemax="100" style="width:40%; background-color:#e51837; padding-top:05px;">
+      										40%
+    							</div>
+  						</div>
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#33cc99; font-size:24px; font-weight:bold;">7052.61</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#e51837; font-size:24px; font-weight:bold;">1,661.25</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed </i></span>
+                    </div>
+            </div>
+            	
+        </div>
+        	<div class="project-num" align="center">
+            <p style="margin:0;color:#3b3b3b;font-size:20px;"><b>$340.16</b></p>
+            <p style="margin:0";>Last dated 1/20/2015</p>
+            </div>
+            	<div class="project-icon" align="right">
+                	<img src="../img/icon.png">
+                </div>
+              
+        
+        </div>
+ <!--Real time,fil-->
+ <div class="graph-block-acc" style="display:none;">
+ <div class="row">
+            <div id="statistics-filter">
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="left">
+                        <span class="selected"><span class="icon fa fa fa-clock-o" style="font-size: 20px; margin: 0px 7px 0px 0px; position: relative; top: 2px;"></span>Real-Time Stats</span>
+                        <span class="divider">|</span>
+                        <a class="link-green" href="#">
+                            <span class="icon fa fa-check-square-o" style="font-size: 20px; margin: 0px 6px 0px 0px; position: relative; top: 3px;"></span>Completed Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="right">
+                        <form name="" method="" action="">
+                            <input class="filter-button" type="reset" type="button" value="Clear" />
+                            <input class="filter-button" type="submit" value="Filter" />
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-to" /></span>
+                            <span style="float: right; padding-left: 9px;">To</span>
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-from" /></span>
+                            <span style="float: right;">From</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--graph-->
+  <div class="graph-pic" align="center">
+  		<div class="row">
+        	<div id="chart-line-container">
+            	<div id="chart-line-main"></div>
+            </div>
+        </div>
+  </div>
+  
+  
+<!--recycled-num-->
+<div class="main-text-num">
+	<div class="text-num">
+	<p style="color:#33cc99;font-size:20px;"><b>34,520,601.25</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:15px;">Recycled</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#e51837;"><b>205,403.52</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Disposed</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#5faee3;"><b>43,502.16</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Reused</p>
+	</div> 
+</div>
+ </div> 
+ 
+ 
+ 
+ 
+         
+        
+<!--second block-->
+ <div class="first-project">
+        	<div class="project-content">
+            	<div class="project-text" align="left">
+                <p style="font-size:16px;"><b>2.Building 2</b></p>
+                <p>8080 28th Avenue,Suite 340</p>
+                <p>San Francisco,CA 94131</p>
+            	</div>
+                	<div class="project-right-buttons" align="left">
+            	<form action="" method="" name="">
+                <input type="button" value="ADD DATA" class="project-first-button" style="background-color:#1c1c1c;">
+                 <input type="button" value="VIEW DETAILS" class="project-first-button">
+                     </form>
+                     </div>
+            </div>
+            		 
+        <div class="project-top-content">
+        	<div class="project-recycle-total">
+            	<div style="padding:0;" align="center">
+             		<div class="progress" style="height:30px; background-color:#d4f4e9; width:90%;">
+    							<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="" aria-valuemax="100" style="width:70%; background-color:#33cc99; padding-top:05px;">
+      										70%
+    							</div>
+                                <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="" aria-valuemax="100" style="width:30%; background-color:#e51837; padding-top:05px;">
+      										30%
+    							</div>
+  						</div>
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#33cc99; font-size:24px; font-weight:bold;">340,052.61</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#e51837; font-size:24px; font-weight:bold;">102,015.78</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed </i></span>
+                    </div>
+           </div>
+        </div>
+        	<div class="project-num" align="center">
+            <p style="margin:0;color:#3b3b3b;font-size:20px;"><b>$25,043.25</b></p>
+            <p style="margin:0";>Last dated 1/20/2015</p>
+            </div>
+            	<div class="project-icon" align="right">
+                	<img src="../img/icon.png">
+                </div>
+              
+        
+        </div>
+ <!--Real time,fil-->
+ <div class="graph-block-acc" style="display:none;">
+ <div class="row">
+            <div id="statistics-filter">
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="left">
+                        <span class="selected"><span class="icon fa fa fa-clock-o" style="font-size: 20px; margin: 0px 7px 0px 0px; position: relative; top: 2px;"></span>Real-Time Stats</span>
+                        <span class="divider">|</span>
+                        <a class="link-green" href="#">
+                            <span class="icon fa fa-check-square-o" style="font-size: 20px; margin: 0px 6px 0px 0px; position: relative; top: 3px;"></span>Completed Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="right">
+                        <form name="" method="" action="">
+                            <input class="filter-button" type="reset" type="button" value="Clear" />
+                            <input class="filter-button" type="submit" value="Filter" />
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-to" /></span>
+                            <span style="float: right; padding-left: 9px;">To</span>
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-from" /></span>
+                            <span style="float: right;">From</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--graph-->
+  <div class="graph-pic" align="center">
+  		<!--<div class="row">
+        	<div id="chart-line-container">
+            	<div id="chart-line-main"></div>
+            </div>
+        </div>-->
+        <img src="../img/graph1.png" width="800" height="236" />
+  </div>
+  
+  
+<!--recycled-num-->
+<div class="main-text-num">
+	<div class="text-num">
+	<p style="color:#33cc99;font-size:20px;"><b>34,520,601.25</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:15px;">Recycled</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#e51837;"><b>205,403.52</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Disposed</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#5faee3;"><b>43,502.16</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Reused</p>
+	</div> 
+</div>
+ </div> 
+ 
+ 
+ 
+ 
+ 
+  <!--last block-->
+ 
+  		<div class="first-project">
+        	<div class="project-content">
+            	<div class="project-text" align="left">
+                <p style="font-size:16px;"><b>3.Building 3</b></p>
+                <p>98765 2nd Broadway Avenue</p>
+                <p>San Mateo, CA 94403</p>
+            	</div>
+                	<div class="project-right-buttons" align="left">
+            	<form action="" method="" name="">
+                <input type="button" value="ADD DATA" class="project-first-button" style="background-color:#1c1c1c;">
+                 <input type="button" value="VIEW DETAILS" class="project-first-button">
+                     </form>
+                     </div>
+            </div>
+            		 
+        <div class="project-top-content">
+        	<div class="project-recycle-total">
+             			<div style="padding:0;" align="center">
+             		<div class="progress" style="height:30px; background-color:#d4f4e9; width:90%;">
+    							<div class="progress-bar progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="" aria-valuemax="100" style="width:50%; background-color:#33cc99; padding-top:05px;">
+      										50%
+    							</div>
+                                <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="" aria-valuemax="100" style="width:50%; background-color:#e51837; padding-top:05px;">
+      										50%
+    							</div>
+  						</div>
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#33cc99; font-size:24px; font-weight:bold;">1,65.07</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#e51837; font-size:24px; font-weight:bold;">812.53</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed </i></span>
+                    </div>
+            </div>
+            	
+                
+        </div>
+        	<div class="project-num" align="center">
+            <p style="margin:0;color:#3b3b3b;font-size:20px;"><b>$160.52</b></p>
+            <p style="margin:0";>Last dated 1/20/2015</p>
+            </div>
+            	<div class="project-icon" align="right">
+                	<img src="../img/icon.png">
+                </div>
+                    
+              
+        
+        </div>
+        
+ <!--Real time,fil-->
+ <div class="graph-block-acc" style="display:none;">
+ <div class="row">
+            <div id="statistics-filter">
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="left">
+                        <span class="selected"><span class="icon fa fa fa-clock-o" style="font-size: 20px; margin: 0px 7px 0px 0px; position: relative; top: 2px;"></span>Real-Time Stats</span>
+                        <span class="divider">|</span>
+                        <a class="link-green" href="#">
+                            <span class="icon fa fa-check-square-o" style="font-size: 20px; margin: 0px 6px 0px 0px; position: relative; top: 3px;"></span>Completed Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="right">
+                        <form name="" method="" action="">
+                            <input class="filter-button" type="reset" type="button" value="Clear" />
+                            <input class="filter-button" type="submit" value="Filter" />
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-to" /></span>
+                            <span style="float: right; padding-left: 9px;">To</span>
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-from" /></span>
+                            <span style="float: right;">From</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--graph-->
+  <div class="graph-pic" align="center">
+  		<!--<div class="row">
+        	<div id="chart-line-container">
+            	<div id="chart-line-main"></div>
+            </div>
+        </div>-->
+        
+         <img src="../img/graph1.png" width="800" height="236" />
+  </div>
+  
+  
+<!--recycled-num-->
+<div class="main-text-num">
+	<div class="text-num">
+	<p style="color:#33cc99;font-size:20px;"><b>34,520,601.25</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:15px;">Recycled</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#e51837;"><b>205,403.52</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Disposed</p>
+	</div> 
+    
+    <div class="text-num">
+	<p style="color:#33cc99;font-size:20px;color:#5faee3;"><b>43,502.16</b></p>
+	<p style="color:#b0b0b0;font-size:8px;margin-left:35px;">Reused</p>
+	</div> 
+</div>
+ </div> 
+ 
+ 
+ 
+ 
+ 
+        
+
+  
+  
+  
+ 
+</div> 
+    
+   
+    
+    
+    
+    
+   
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    <script type="text/javascript">
+            	
+				$(".first-project").click(
+       				 function() {
+						// alert('Hello World');
+						//$('.graph-block-acc').hide(500);
+						$(this).toggleClass('acc-bg-white');
+						$(this).next('.graph-block-acc').toggle(500);
+        			}
+				);
+	</script>   
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- -------------- -->
+    <!-- footer section -->
+    <!-- -------------- -->
+    
+    <div style="background: #f2f2f2; float: left; width: 100%; height: 50px;">&nbsp;</div>
+    <div id="global-footer">
+    	<div class="content">
+        	<div class="row">
+            	<div class="column-50 no-border left">
+                    <img src="../img/logo.png" width="238" height="58" />
+                </div>
+                <div class="column-50 no-border right">
+                    <a class="link-regular" href="#">Terms of Use</a>
+                    <span>|</span>
+                    <a class="link-regular" href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a class="link-regular" href="#">Contact Us</a>
+                </div>
+            </div>
+            <!--<div class="row">
+            	<div class="line">&nbsp;</div>
+            </div>-->
+            <div class="row">
+            	<div class="copyright">&copy; Copyright 2014 <a class="link-regular" href="http://www.wastetracking.com" target="_blank"><span style="color: #ccc;">WasteTracking.com</span></a>. All rights reserved. WasteTracking brand is a subsidiary of <a class="link-regular" href="http://www.greenhalosystems.com" target="_blank"><span style="color: #ccc;">Green Halo Systems</span></a>.</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------------- -->
+    <!-- modal windows -->
+    <!-- ------------- -->
+    
+    <!-- suggestions -->
+    <!--<div id="reveal-suggestions" class="reveal-form" style="top: 19%;">
+    	<form id="modal-suggestions-form" name="" method="" action="">
+            <div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Suggestions</div>
+                <div class="form">
+                    <div class="fields">
+                        <div class="left">Name *</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Email *</div>
+                        <div class="right"><input name="" placeholder="Enter page URL" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Page</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Suggestions</div>
+                        <div class="right"><textarea name=""></textarea></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">&nbsp;</div>
+                        <div class="right"><span class="note">Leave your feedback to help make this an easier and faster system for you.</span></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">&nbsp;</div>
+                        <div class="right"><input class="submit-suggestions" type="button" value="Submit"></div>
+                    </div>
+                </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </form>
+        <div id="modal-suggestions-thankyou">
+        	<div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Request Confirmation</div>
+            <div class="thankyou">
+            	<div class="left"><span class="fa fa-check-circle-o" style="color: #bfbfbf; font-size: 75px;"></span></div>
+                <div class="right">Thank you for your submission!<br/><a class="close-reveal-modal ok">OK</a></div>
+            </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </div>
+    </div>
+    
+    -->
+    
+    
+    
+    
+    
+	
+	
+	
+	
+	<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+	<script type="text/javascript" src="../js/jquery.easing.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+		
+		/* == chart line == */
+		$('#chart-line').highcharts(
+		{
+			chart: { backgroundColor: 'none', type: 'line', height: 60, },
+			colors: ['#669966', '#85b885', '#295c29'],
+			credits: { enabled: false },
+			title: { text: '' },
+			legend: { enabled: false },
+			xAxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				labels: { style: { color: '#4c4c4c', font: 'normal 8px Arial' } },
+			},
+			yAxis: {
+				min: 0,
+				gridLineDashStyle: 'line',
+				gridLineColor: '#d8dadb',
+				labels: { style: { color: '#4c4c4c', font: 'normal 8px Arial' } },
+				title: { text: 'In Tons', style: { color: '#4c4c4c', font: 'normal 8px Arial' }, margin: 20 }
+			},
+			plotOptions:
+			{
+				column:
+				{
+					borderWidth: 0,
+					dataLabels:
+					{
+						 enabled: true,
+						 style: { color: '#333', fontSize: '8px', fontWeight: 'bold' },
+						 y: -3,
+					},
+					pointPadding: 0.2,
+					series: { allowPointSelect: true },
+				},
+			},
+			series:
+			[{
+				name: 'Reused',
+				data: [0, 0, 0, 225.25, 0, 0, 0, 0, 340.34, 0, 0],
+				lineWidth: 1,
+				marker: { fillColor: '#333', lineWidth: 1, lineColor: null, radius: 1, symbol: 'circle', },
+			},
+			{
+				name: 'Recycled',
+				data: [270.27, 52.25, 25.52, 270.72, 340.43, 430.34, 520.25, 1510.70, 1744.81, 746.58, 520.34, 250.52],
+				lineWidth: 1,
+				marker: { fillColor: '#333', lineWidth: 1, lineColor: null, radius: 1, symbol: 'circle', },
+			},
+			{
+				name: 'Disposed',
+				data: [52.16, 0, 0, 0, 0, 16.61, 205.07, 25.70, 703.16, 7.07, 0, 17.70],
+				lineWidth: 1,
+				marker: { fillColor: '#333', lineWidth: 1, lineColor: null, radius: 1, symbol: 'circle', },
+			},
+			],
+			tooltip:
+			{
+				backgroundColor: 'rgba(255, 255, 255, 0)', borderWidth: 0, enabled: true, headerFormat: '<span style="color: #333;"><b>{point.key}</b></span>', pointFormat: '<span style="color: #333;"><b>{series.name}</b>: {point.y}</span>', shadow: false, useHTML: true
+				
+			}
+		});
+		
+		
+		
+		
+		/* == chart line main == */
+		$('#chart-line-main').highcharts(
+		{
+			chart: { backgroundColor: 'none', type: 'line', height: 236, width: 800, },
+			colors: ['#53d4a9', '#e72f4b', '#65b1e4'],
+			credits: { enabled: false },
+			title: { text: '' },
+			legend: { enabled: false },
+			xAxis: {
+				categories: ["Jan '14", "Feb '14", "Mar '14", "Apr '14", "May '14", "Jun '14", "Jul '14", "Aug '14", "Sep '14", "Oct '14", "Nov '14", "Dec '14"],
+				labels: { style: { color: '#4c4c4c', font: 'normal 10px Arial' } },
+			},
+			yAxis: {
+				min: 0,
+				gridLineDashStyle: 'line',
+				gridLineColor: '#d8dadb',
+				labels: { style: { color: '#4c4c4c', font: 'normal 10px Arial' } },
+				title: { text: 'In Tons', style: { color: '#4c4c4c', font: 'normal 10px Arial' }, margin: 20 }
+			},
+			plotOptions:
+			{
+				column:
+				{
+					borderWidth: 0,
+					dataLabels:
+					{
+						 enabled: true,
+						 style: { color: '#fff', fontSize: '10px', fontWeight: 'bold' },
+						 y: -3,
+					},
+					pointPadding: 0.2,
+					series: { allowPointSelect: true },
+				},
+			},
+			series:
+			[{
+				name: 'Reused',
+				data: [0, 0, 0, 225.25, 0, 0, 0, 0, 340.34, 0, 0],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			{
+				name: 'Recycled',
+				data: [270.27, 52.25, 25.52, 270.72, 340.43, 430.34, 520.25, 1510.70, 1744.81, 746.58, 520.34, 250.52],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			{
+				name: 'Disposed',
+				data: [52.16, 0, 0, 0, 0, 16.61, 205.07, 25.70, 703.16, 7.07, 0, 17.70],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			],
+			tooltip:
+			{
+				backgroundColor: 'rgba(255, 255, 255, 0)', borderWidth: 0, enabled: true, headerFormat: '<span style="color: #333333;"><b>{point.key}</b></span>', pointFormat: '<span style="color: #333333;"><b>{series.name}</b>: {point.y}</span>', shadow: false, useHTML: true
+				
+			}
+		});
+		
+	</script>
+    
+    <script>
+    	function test() {
+			var chart = $('#chart-donut').highcharts();
+        //chart.xAxis[0].setColors(['#000']);
+        
+        	chart.setOptions(
+			{
+				colors: ['#669966', '#85b885', '#295c29']
+			});
+		}
+		test();
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

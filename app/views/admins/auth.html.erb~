@@ -1,0 +1,5 @@
+<% if @admins.nil? %>
+<h1> incorrect login </h1>   
+<% else %>
+<%= render :file => '/opt/stack/ghs_project/app/views/admins/dashboard.html.erb' %>
+<% end %>

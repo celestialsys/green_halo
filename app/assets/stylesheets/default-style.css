@@ -1,0 +1,544 @@
+html { background: ; min-width: 1100px; }
+body { background: #f2f2f2; color: #3c3c3c; font: normal 14px Arial; letter-spacing: .15px; margin: 0; padding: 0; overflow-x: hidden; min-width: 1100px; }
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* == standardize arial fonts == */
+/* ============================= */
+
+/*@font-face {
+    font-family: 'Arial';
+    src:	url('../fonts/arial.ttf');
+    src:	
+			url('../fonts/arial.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'ArialItalic';
+    src:	url('../fonts/ufonts.com_arial-black-italic.ttf');
+    src:	
+			url('../fonts/ufonts.com_arial-black-italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'ArialBold';
+    src:	url('../../_lib/fonts/bold.eot');
+    src:	url('../../_lib/fonts/bold.eot?#iefix') format('embedded-opentype'),
+			url('../../_lib/fonts/bold.woff') format('woff'),
+			url('../../_lib/fonts/bold.ttf') format('truetype'),
+			url('../../_lib/fonts/bold.svg#ArialBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+
+
+
+
+
+
+
+/* =========================== */
+/* == links + button styles == */
+/* =========================== */
+
+a { margin: 0; padding: 0; }
+a.link-green, a.link-green:active, a.link-green:hover, a.link-green:visited { border: none; color: #669966; outline: none; text-decoration: none; }
+a.link-gray { border: none; color: #4c4c4c; outline: none; text-decoration: none; }
+a.link-gray:hover { border: none; color: #0072bc; outline: none; text-decoration: none; }
+a.link-regular, a.link-regular:active, a.link-regular:hover, a.link-regular:visited { border: none; color: inherit !important; outline: none; text-decoration: none; }
+a.button, a.button:active, a.button:hover, a.button:visited { background: #669966; border: none; color: #fff; margin: 0; outline: none; padding: 6px 14px 7px 12px; text-decoration: none;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+/* ========== */
+/* == grid == */
+/* ========== */
+.grid-10 { float: left; margin: 0; padding: 0; width: 10% }
+.grid-8 { float: left; margin: 0; padding: 0; width: 12.5% }
+.grid-7 { float: left; margin: 0; padding: 0; width: 25% }
+.grid-6 { float: left; margin: 0; padding: 0; width: 37.5% }
+.grid-5 { float: left; margin: 0; padding: 0; width: 50% }
+.grid-4 { float: left; margin: 0; padding: 0; width: 62.5% }
+.grid-3 { float: left; margin: 0; padding: 0; width: 75% }
+.grid-2 { float: left; margin: 0; padding: 0; width: 87.5% }
+.grid-1 { float: left; margin: 0; padding: 0; width: 100% }
+
+.col-8 { float: left; margin: 0; padding: 0; width: 12.50% }
+.col-7 { float: left; margin: 0; padding: 0; width: 14.2857143% }
+.col-6 { float: left; margin: 0; padding: 0; width: 16.6666667% }
+.col-5 { float: left; margin: 0; padding: 0; width: 20% }
+.col-4 { float: left; margin: 0; padding: 0; width: 25% }
+.col-3 { float: left; margin: 0; padding: 0; width: 33.3333333% }
+.col-2 { float: left; margin: 0; padding: 0; width: 50% }
+.col-1 { float: left; margin: 0; padding: 0; width: 100% }
+
+
+
+
+
+
+
+
+
+/* ============ */
+/* == column == */
+/* ============ */
+
+.column-2 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 2% !important; height: inherit; }
+.column-3 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 3% !important; height: inherit; }
+.column-4 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 4% !important; height: inherit; }
+.column-5 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 5% !important; height: inherit; }
+.column-7 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 7% !important; height: inherit; }
+.column-8 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 8% !important; height: inherit; }
+.column-10 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 10% !important; height: inherit; }
+.column-11 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 11% !important; height: inherit; }
+.column-12 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 12% !important; height: inherit; }
+.column-13 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 13% !important; height: inherit; }
+.column-14 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 14% !important; height: inherit; }
+.column-15 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 15% !important; height: inherit; }
+.column-18 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 18% !important; height: inherit; }
+.column-20 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 20% !important; height: inherit; }
+.column-21 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 21% !important; height: inherit; }
+.column-22 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 22% !important; height: inherit; }
+.column-24 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 24% !important; height: inherit; }
+.column-25 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 25% !important; height: inherit; }
+.column-26 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 26% !important; height: inherit; }
+.column-30 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 30% !important; height: inherit; }
+.column-31 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 31% !important; height: inherit; }
+.column-35 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 35% !important; height: inherit; }
+.column-36 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 36% !important; height: inherit; }
+.column-40 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 40% !important; height: inherit; }
+.column-49 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 49% !important; height: inherit; }
+.column-50 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 50% !important; height: inherit; }
+.column-52 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 52% !important; height: inherit; }
+.column-53 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 53% !important; height: inherit; }
+.column-55 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 55% !important; height: inherit; }
+.column-70 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 70% !important; height: inherit; }
+.column-76 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 76% !important; height: inherit; }
+.column-86 { border-top: solid 1px transparent !important; border-right: solid 1px #bfbfbf; border-bottom: solid 1px transparent !important; border-left: solid 1px transparent !important; float: left; margin: 0; overflow: hidden; padding: 0px 0px 0px 15px; width: 86% !important; height: inherit; }
+.column-2.no-border,
+.column-4.no-border,
+.column-5.no-border,
+.column-7.no-border,
+.column-8.no-border,
+.column-10.no-border,
+.column-11.no-border,
+.column-12.no-border,
+.column-13.no-border,
+.column-14.no-border,
+.column-15.no-border,
+.column-18.no-border,
+.column-20.no-border,
+.column-21.no-border,
+.column-22.no-border,
+.column-24.no-border,
+.column-25.no-border,
+.column-26.no-border,
+.column-30.no-border,
+.column-31.no-border,
+.column-35.no-border,
+.column-36.no-border,
+.column-40.no-border,
+.column-49.no-border,
+.column-50.no-border,
+.column-52.no-border,
+.column-53.no-border,
+.column-55.no-border,
+.column-70.no-border,
+.column-76.no-border,
+.column-86.no-border { border: none !important; }
+
+
+
+
+
+
+
+
+/* =================== */
+/* == global header == */
+/* =================== */
+
+#global-header { background: #1c1c1c no-repeat 50% 50%; display: block; margin: 0; padding: 0; width: 100%; height: 35px;
+	padding-top:10px;
+	background-size: cover;
+	-khtml-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	-webkit-background-size: cover;
+	color:#ffffff;
+}
+#global-header .header-logo-and-support { display: block; margin: 0 auto; padding: 0; width: 1100px; height:auto; }
+#global-header .header-logo-and-support .logo { margin: 42px 0px 0px 0px; padding: 0; }
+#global-header .header-logo-and-support .support { color: #fff; font: normal 12px Arial; margin: 62px 0px 0px 0px; padding: 0; text-align: right; text-shadow: 0px 1px 0px rgba(0, 0, 0, .60); }
+
+.header-nav {background-color:#dcdcdc;  display: block; margin: 0 auto; overflow: hidden; padding: 0; width: 100%; height: 68px; }
+.header-nav .tab { color: #2b2b2b; cursor: pointer; float: left; font: normal 11px Arial; font-weight:bold; margin: 0; padding: 0; text-align: center; text-shadow: 0px 1px 0px rgba(0, 0, 0, .21); width: 10%; height: 68px; }
+.header-nav .tab .tab-default {   display: inline-block; margin: 0; padding: 0; width: 100%; height: 68px; }
+.header-nav .tab .tab-default-left-shadow {  display: inline-block; margin: 0; padding: 0; width: 100%; height: 68px; }
+.header-nav .tab .tab-default-right-shadow {  display: inline-block; margin: 0; padding: 0; width: 100%; height: 68px; }
+.header-nav .tab .tab-selected { background:#f2f2f2; display: inline-block; color: #ce020c; margin: 0; padding: 0; text-shadow: 0px 1px 0px rgba(0, 0, 0, .0); width: 100%; height: 68px; }
+.header-nav .tab .tab-default:hover, 
+.header-nav .tab .tab-default-left-shadow:hover,
+.header-nav .tab .tab-default-right-shadow:hover {  color: #ce020c; text-shadow: 0px 1px 0px rgba(0, 0, 0, .0); }
+
+
+
+
+
+
+
+
+
+
+/* ========================== */
+/* == global main elements == */
+/* ========================== */
+
+#global-main-top-bar { background: #3c3c3c; color: #fff; font: normal 15px Arial; line-height: 40px; margin: 40px auto 0px auto; overflow: hidden; padding: 0; width: 1100px; height: 40px;
+	border-radius: 4px 4px 0px 0px;
+	-khtml-border-radius: 4px 4px 0px 0px;
+	-ms-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	-o-border-radius: 4px 4px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+}
+#global-main-top-bar.no-radius { 
+	border-radius: 0px;
+	-khtml-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+#global-main-top-bar.top-space { margin: 33px auto 0px auto; width: 100%; }
+#global-main-top-bar div { float: left; font-size: 20px; margin: 0; padding: 10px 8px 0px 13px; }
+#global-main-top-bar .add { background: #669966; color: #fff; font: normal 12px Arial; margin: 0px 0px 0px 18px; padding: 6px 14px 6px 10px; position: relative; top: -1px; text-decoration: none;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#global-main-top-bar span { font: normal 20px Arial; line-height: 20px; margin: 0; padding: 0px 6px 0px 0px; position: relative; top: 3px; }
+#global-main-top-bar span.id { font: normal 15px Arial;  font-weight:bold; top: 0px;  }
+#global-main-top-bar span.note { color: #999; font: normal 14px Arial; position: relative; top: 0; }
+
+/* == global main tabs == */
+#global-main-tabs { background: #efefef; border-right: solid 1px #bfbfbf; border-left: solid 1px #bfbfbf; border-top: solid 1px #bfbfbf; margin: 0 auto; margin-top:30px; overflow: hidden; padding: 0; width: 1100px; height: 46px;
+border-radius: 4px 4px 0px 0px;
+	-khtml-border-radius: 4px 4px 0px 0px;
+	-ms-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	-o-border-radius: 4px 4px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px; }
+#global-main-tabs .tabs { border-right: solid 1px #bfbfbf; border-bottom: solid 1px #bfbfbf; color: #3c3c3c; cursor: pointer; display: inline-block; font: normal 13px Arial; line-height: 46px; margin: 0; overflow: hidden; padding: 0px 1px 0px 0px; text-align: center; width: 100%; height: 46px; }
+#global-main-tabs .tabs:hover { background: #fff; border-bottom: solid 1px #fff; }
+#global-main-tabs .tabs-selected { background: #fff; border-right: solid 1px #bfbfbf; border-bottom: solid 1px #fff; color: #3c3c3c; display: inline-block; font: normal 13px Arial; line-height: 46px; margin: 0; padding: 0px 1px 0px 0px; text-align: center; width: 100%; height: 46px; }
+#global-main-tabs .tabs.no-border, #global-main-tabs .tabs-selected.no-border { border-right: none; }
+#global-main-tabs .tabs .icon, #global-main-tabs .tabs-selected .icon { color: #80b13f; font-size: 20px; position: relative; }
+
+/* == global main content box == */
+#global-main-content { background: #fff; border-top: 1px solid #fff; border-right: 1px solid #bfbfbf; border-bottom: 1px solid #bfbfbf; border-left: 1px solid #bfbfbf; margin: 0 auto; padding: 21px 0px 40px 0px; width: 1100px; height: auto; }
+
+#container { border: none; display: block; margin: 7px auto 0px auto; overflow: visible; padding: 0; width: 94%; height: auto; }
+
+/* == intro == */
+#container .intro { color: #3c3c3c; font: normal 30px Arial;  font-weight:bold; line-height: 32px; margin: 7px 0px 0px 0px; padding: 0; width: 100%; height: auto; }
+#container .intro span { color: #666; font: normal 14px Arial; line-height: 16px !important; margin: 0; padding: 0px 0px 0px 2px; position: relative; top: -11px; }
+#container .content { color: #666; font: normal 14px Arial; line-height: 16px; margin: 31px 0px 0px 0px; padding: 0px 10px 0px 10px; width: 100%; height: auto; }
+#container .content span { color: #3c3c3c; font: normal 14px Arial; font-weight:bold; }
+
+/* == header bar == */
+#container .header .search { background: #fff; border-style: solid; border-top-color: #ccc; border-right-color: transparent !important; border-bottom-color: transparent !important; border-left-color: #ccc; border-width: 1px; color: #3c3c3c; float: right; margin: 6px 8px 0px 0px; padding: 0; width: 80%; height: 24px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container .header .search input { background: none; border: none; }
+#container .header .search input.search { color: #4c4c4c; float: left; font: normal 12px Arial; line-height: 24px; letter-spacing: .15px; margin: -1px 0px 0px 0px; padding: 0px 5px 0px 5px; width: 90%; } 
+#container .header .search input.search:focus { outline: none; }
+#container .header .search input.search-icon { margin: 0; padding: 4px 0px 0px 2px; }
+
+/* == forms == */
+#container .form-container { border-top: solid 1px transparent; border-right: solid 1px #bfbfbf; border-bottom: solid 1px #bfbfbf; border-left: solid 1px #bfbfbf; display: block; margin: -1px 0px 0px 0px; overflow: hidden; padding: 0; width: 100%; height: auto; }
+#container .form-container .form { margin: 40px auto 0px auto; width: 100%; height: auto; }
+#container .form-container .form .fields { float: left; font: normal 14px Arial; margin: 0px 0px 6px 0px; padding: 0; width: 100%; }
+#container .form-container .form .fields .sides-padding { padding: 0px 0px 0px 20px; }
+#container .form-container .form .fields .name { float: left; line-height: 34px; margin: 0; padding: 0px 20px 0px 0px; text-align: right; width: 20%; }
+#container .form-container .form .fields .field { float: left; margin: 0; padding: 0; width: 40%; }
+#container .form-container .form .fields .spacer { float: left; margin: 0; padding: 0; width: 40%; }
+#container .form-container .form .fields .number { background: #477a47; color: #fff; font: normal 14px Arial;  font-weight:bold; line-height: 34px; padding: 0px 13px 0px 13px;
+	border-radius: 24px;
+	-khtml-border-radius: 24px;
+	-ms-border-radius: 24px;
+	-moz-border-radius: 24px;
+	-o-border-radius: 24px;
+	-webkit-border-radius: 24px;
+}
+#container .form-container .form .fields input { margin: 0; padding: 0; width: 100%; }
+#container .form-container .form .fields span { display: inline-block; }
+#container .form-container .form .fields input[type=text], #container .form-container .form .fields input[type=password] { background: #fff; border: solid 1px #bfbfbf; color: #3c3c3c; margin: 0; padding: 8px 6px 8px 6px; width: 100%;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container .form-container .form .fields input[type=submit], #container .form-container .form .fields input[type=button] { background: #669966; border: none; color: #fff; line-height: 34px; margin: 0; outline: none; padding: 0px 20px 0px 18px; text-align: center; text-decoration: none; width: auto; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container .form-container .form .fields select { background: #fff; border: solid 1px #bfbfbf; color: #3c3c3c; font: normal 14px Arial; line-height: 16px; margin: 0; padding: 7px 10px 7px 4px; width: 100%; height: 34px;
+	border-radius: 4px;
+	-kthml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container textarea { background: none; border: solid 1px #bfbfbf; color: #3c3c3c; font: normal 14px Arial; display: block; line-height: 17px; margin: 0; outline: none; padding: 5px 6px 0px 6px; width: 100%; height: 104px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container .form-container .form .fields input[type=text]:focus, #container .form-container .form .fields input[type=password]:focus, #container .form-container .form .fields select:focus { outline: none; }
+
+#container .form-container .row-header { background: #bfbfbf; color: #3c3c3c; float: left; font: normal 12px Arial;  font-weight:bold; line-height: 32px; margin: 0; padding: 0; width: 100%; height: auto; }
+#container .form-container .row-header-gray { background: #efefef; border-top: solid 1px #bfbfbf; border-bottom: solid 1px transparent; color: #3c3c3c; float: left; font: normal 12px Arial;  font-weight:bold; line-height: 32px; margin: 0; padding: 0px 0px 0px 20px; width: 100%; height: auto; }
+#container .form-container .row-items { color: #3c3c3c; float: left; font: normal 14px Arial; line-height: 32px; margin: 0; padding: 0; width: 100%; height: auto; }
+#container .form-container .row-items.withbg { background: #efefef; }
+#container .form-container .row-header .header, #container .form-container .row-items .item { padding: 0; text-align: center; }
+#container .form-container .row-items .item input[type=text] { background: #fff; border: solid 1px #bfbfbf; color: #3c3c3c; line-height: 14px; margin: 0; padding: 2px 0px 2px 0px; width: 40%;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#container .form-container .row-items .item input[type=text]:focus { outline: none; }
+#container .form-container .row-items input[type=submit], #container .form-container .row-items input[type=button] { background: #669966; border: none; color: #fff; line-height: 34px; margin: 0; outline: none; padding: 0px 20px 0px 20px; text-align: center; text-decoration: none; width: auto; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* == property / proejcts area == */
+#container .form-container .form .projects { color: #3c3c3c; float: left; font: normal 14px Arial; line-height: 16px; margin: 0; padding: 3px 0px 4px 18px; width: 100%; height: auto; }
+#container .form-container .form .projects.title { font: normal 13px Arial;  font-weight:bold; padding: 4px 0px 4px 18px; text-align: right; }
+
+/* == poject messages and history area == */
+#container .form-container .form .message-bar { color: #3c3c3c; float: left; font: normal 13px Arial;  font-weight:bold; line-height: 16px; margin: 0; padding: 10px 0px 0px 0px; width: 100%; height: auto; }
+#container .form-container .form .message-content { border-bottom: solid 1px #ccc; color: #3c3c3c; float: left; font: normal 14px Arial; line-height: 16px; margin: 0; padding: 0px 40px 10px 40px; width: 100%; height: auto; }
+#container .form-container .form .actions-content { border-bottom: solid 1px #ccc; color: #3c3c3c; float: left; font: normal 14px Arial; line-height: 16px; margin: 0; padding: 9px 40px 10px 40px; width: 100%; height: auto; }
+#container .form-container .form .history-bar { color: #3c3c3c; float: left; font: normal 14px Arial; margin: 0; padding: 10px 0px 0px 0px; width: 100%; height: auto; }
+#container .form-container .form .message-bar.withbg, #container .form-container .form .message-content.withbg, #container .form-container .form .actions-content.withbg { background: #f5f5f5; }
+#container .form-container .form .message-bar.withbg.top { border-top: solid 1px #ccc; }
+#container .form-container .form .message-bar .left { float: left; margin: 0; padding: 0px 40px 0px 40px; width: 30%; }
+#container .form-container .form .message-bar .right { float: left; margin: 0; padding: 0px 5% 0px 0px; width: 70%; }
+#container .form-container .form .message-content .morecontent span, #container .form-container .form .actions-content .morecontent span { display: none; }
+#container .form-container .form .message-content a.morelink, #container .form-container .form .actions-content a.morelink { color: #669966; font: normal 12px Arial;  font-weight:bold; text-decoration: none; }
+#container .form-container .form .actions-content.withbg.top { border-top: solid 1px #ccc; }
+#container .form-container .form .actions-content .left { float: left; margin: 0; padding: 0; width: 4%; }
+#container .form-container .form .actions-content .right { float: left; margin: 0; padding: 0; width: 96%; }
+#container .form-container .form .actions-content .icon { color: #669966; font-size: 16px; margin: 0; padding: 0; position: relative; top: 1px; }
+#container .form-container .form .history-bar .left { float: left; font: normal 13px Arial;  font-weight:bold; line-height: 23px; margin: 0; padding: 0px 40px 0px 40px; width: 30%; }
+#container .form-container .form .history-bar .right { float: left; line-height: 23px; margin: 0; padding: 0px 5% 0px 0px; width: 70%; }
+
+
+
+
+
+
+
+
+
+/* ========================================================= */
+/* == reycling center modules in project/property details == */
+/* ========================================================= */
+
+#recycling-center { margin: 18px auto 0px auto; padding: 0; text-align: center; width: 100%; height: auto; }
+#recycling-center .box { background: #99cc99; color: #fff; display: inline-block; font: normal 10px Arial;  font-weight:bold; margin: 0; padding: 15px 0px 15px 0px; text-align: center; text-shadow: 0px 1px 1px rgba(0, 0, 0, .09); width: 14%; height: auto;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#recycling-center .box:hover { background: #669966; }
+#recycling-center .box span.icon { font-size: 24px; margin: 0; padding: 0px 0px 9px 0px; text-shadow: 0px 1px 1px rgba(0, 0, 0, .11); }
+#recycling-center .box-spacer { display: inline-block; margin: 0; padding: 0; width: .15%; height: auto; }
+#recycling-center .img { background: #99cc99; color: #fff; display: inline-block; font: normal 10px Arial;  font-weight:bold; margin: 0; padding: 0; text-align: center; text-shadow: 0px 1px 1px rgba(0, 0, 0, .09); vertical-align: middle; width: 14%; height: auto;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#recycling-center .img.empty { background: none; }
+#recycling-center .img img { margin: 0; padding: 0; width: 100%; height: auto; }
+
+
+
+
+
+
+
+
+
+/* =================== */
+/* == global footer == */
+/* =================== */
+
+#global-footer { background: #1c1c1c; float: left; margin: 0; padding: 0; width: 100%; height: inherit; }
+#global-footer .content { color: #fff; font: normal 12px Arial; line-height: 48px; margin: 10px auto 0px auto; overflow: hidden; padding: 0; width: 1100px; height: auto; }
+#global-footer .content .left { margin: 0; padding: 0; }
+#global-footer .content .right { margin: 0; padding: 5px 0px 0px 0px; text-align: right; }
+#global-footer .content .right span { color: #999; margin: 0; padding: 0px 10px 0px 10px; position: relative; top: -1px; }
+#global-footer .line { background: #666; font-size: 0px; line-height: 1px; margin: 6px 0px 0px 0px; padding: 0; width: 1100px; height: 1px; }
+#global-footer .copyright { color: #999; font: normal 11px Arial; line-height: 14px; margin: 0px 0px 30px 0px; padding: 0px 0px 0px 1px; }
+
+
+
+
+
+
+
+
+
+/* ============================ */
+/* == cross browser checkbox == */
+/* ============================ */
+
+input[type=checkbox].css-checkbox { border: 0; clip: rect(0 0 0 0); margin: -1px; padding: 0; position: absolute; width: 1px; height: 1px;  }
+input[type=checkbox].css-checkbox.lrg + label.css-label.lrg { background-repeat: no-repeat; background-position: 0px 0px; cursor: pointer; display: inline-block; font: normal 14px Arial; line-height: 19px; padding: 0px 0px 0px 27px; vertical-align: middle; }
+input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg { background-position: 0 -20px; }
+.checkbox-style { background-image: url(../../_images/icons/content/form-checkboxes.png); }
+input[type=radio].css-radio { border: 0; clip: rect(0 0 0 0); margin: -1px; padding: 0; position: absolute; width: 1px; height: 1px;  }
+input[type=radio].css-radio.lrg + label.css-label.lrg { background-repeat: no-repeat; background-position: 0px 0px; cursor: pointer; display: inline-block; font: normal 14px Arial; line-height: 19px; padding: 0px 0px 0px 27px; vertical-align: middle; }
+input[type=radio].css-radio.lrg:checked + label.css-label.lrg { background-position: 0 -20px; }
+.radio-style { background-image: url(../../_images/icons/content/form-checkboxes.png); }
+
+
+
+
+
+
+
+
+
+/* =================== */
+/* == reveal window == */
+/* =================== */
+
+/* == reveal window == */
+.reveal-modal-bg {  background: #000; background: rgba(0,0,0,.8); display: none; position: fixed; top: 0; left; width: 100%; height: 100%; z-index: 100; }
+.close-reveal-modal { color: #fff; cursor: pointer; font: normal 22px Arial; line-height: 40px; position: absolute; top: 0px; right: 12px; }
+.close-reveal-modal:hover { color: #fff; text-decoration: none; }
+
+/* == suggestions and report bugs == */
+.reveal-form { background: #fff; margin-left: -320px; padding: 0; position: absolute; left: 50%; visibility: hidden; width: 640px; z-index: 101; height: auto;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-khtml-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-ms-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-o-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.reveal-form .header { background: #3c3c3c; color: #fff; font: normal 15px Arial; line-height: 40px; margin: 0px 0px 40px 0px; padding: 0px 0px 0px 12px; width: 100%; height: 40px; }
+.reveal-form .form { background: #fff; margin: 0; padding: 0; width: 100%; height: auto; }
+.reveal-form .fields { color: #4c4c4c; display: block; font: normal 14px Arial; line-height: 34px; margin: 0px auto 6px auto; padding: 0; width: 80%; height: 34px; }
+.reveal-form .fields .left { float: left; margin: 0; padding: 0px 20px 0px 0px; text-align: right; width: 25%; }
+.reveal-form .fields .right {  float: left; margin: 0; padding: 0; width: 75%; }
+.reveal-form input { background: #fff; border: solid 1px #bfbfbf; margin: 0; padding: 0px 6px 0px 6px; width: 100%; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.reveal-form select { background: #fff; border: solid 1px #bfbfbf; margin: 0px 2% 0px 0px; padding: 7px 10px 7px 4px; width: 100%; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+.reveal-form textarea { background: #fff; border: solid 1px #bfbfbf; line-height: 16px; margin: 0; padding: 6px 6px 0px 6px; width: 100%; height: 184px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.reveal-form input, .reveal-form select, .reveal-form textarea { outline: none; }
+.reveal-form .fields .note { font: normal 11px Arial; font-style:italic; margin: 0; padding: 0; position: relative; top: -17px; left: 3px; }
+.reveal-form .fields input[type=button] { background: #669966; border: none; color: #fff; float: right; font: normal 14px Arial; line-height: 14px; margin: 0px 0px 40px 0px; outline: none; padding: 0px 16px 0px 16px; text-decoration: none; width: auto; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.reveal-form .thankyou { color: #00285e; display: block; font: normal 20px Arial; line-height: 22px; margin: 0px auto 40px auto; padding: 0; width: 80%; height: 70px; }
+.reveal-form .thankyou .left { float: left; margin: 0; padding: 0px 40px 0px 0px; text-align: right; width: 35%; }
+.reveal-form .thankyou .right {  float: left; margin: 0; padding: 2px 0px 0px 0px; width: 65%; }
+.reveal-form .thankyou .ok { background: #669966; border: none; color: #fff; float: right; font: normal 14px Arial; line-height: 34px; margin: 0; outline: none; padding: 0; text-decoration: none; text-align: center; position: relative; top: 10px; left: -262px; width: 70px; height: 34px;
+	border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}

@@ -1,0 +1,669 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WasteTracking System | Admin | Statistics | Recycling Totals</title>
+
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/datepicker.css">
+ <!--<link rel="stylesheet" type="text/css" media="screen" href="../css/fonts.css">-->
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/default-style.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="../css/stats-page.css">
+ <script type="text/javascript" src="../js/jquery-1.10.0.min.js"></script>
+ <script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+ <script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+
+
+
+<body>
+
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------ -->
+    <!-- header -->
+    <!-- ------ -->
+    
+    <div id="global-header">
+    	<div class="header-logo-and-support">
+        	<div class="column-50 no-border" style="font-size:12px !important;">
+            	LOGGED IN:  <b> Dean Rodatos, Director</b>
+            </div>
+            <div class="column-50 no-border" align="right" style="font-size:12px !important;">
+            	<div>Live Help / Tech Support   -   888 525 1301</div>
+            </div>
+        </div>
+       
+    </div>
+    	 <!-- global nav -->
+        <div class="header-nav">
+          <div style="max-width:1124px; margin:0 auto;">
+          	<div class="grid-10 tab">
+            	<a class="link-regular" href="index.html">
+                    <span class="tab-default-right-shadow">
+                        <span style="position: relative; top: 15px;">
+                        	<img src="../img/logo-sml.png" width="140" height="34" style="margin: 2px 0px 0px 0px;">
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="index.html">
+                    <span class="tab-default-right-shadow nav-create">
+                        <span style="position: relative; top: 44px;">CREATE</span><br/>
+                        <img class="global-nav-add" src="../img/create.png"><br/>
+                        <img class="global-nav-add-hover" src="../img/create-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+        	<div class="grid-10 tab">
+            	<a class="link-regular" href="index.html">
+                    <span class="tab-default-right-shadow nav-home">
+                        <span style="position: relative; top: 44px;">ADD DATA</span><br/>
+                        <img class="global-nav-projects" src="../img/adddata.png"><br/>
+                        <img class="global-nav-projects-hover" src="../img/adddata-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="statistics-overview.html">
+                    <span class="tab-selected nav-statistics-selected">
+                        <span style="position: relative; top: 44px;">STATISTICS</span><br/>
+                        <img class="global-nav-statistics" src="../img/statistics.png">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="settings-info.html">
+                    <span class="tab-default-left-shadow nav-settings">
+                        <span style="position: relative; top: 44px;">TOOLS</span><br/>
+                        <img class="global-nav-settings" src="../img/tools.png"><br/>
+                        <img class="global-nav-settings-hover" src="../img/tools-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="recycler-search.html">
+                    <span class="tab-default nav-recycler-search">
+                        <span style="position: relative; top: 44px;">ORAGANIZE</span><br/>
+                        <img class="global-nav-recycler-search" src="../img/organise.png"><br/>
+                        <img class="global-nav-recycler-search-hover" src="../img/organise-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="#" data-reveal-id="reveal-suggestions" data-animation="fade">
+                    <span class="tab-default nav-suggestions">
+                        <span style="position: relative; top: 44px;">BRAG IT</span><br/>
+                        <img class="global-nav-suggestions" src="../img/bragit.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-suggestions-hover" src="../img/bragit-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="#" data-reveal-id="reveal-reportbug" data-animation="fade">
+                    <span class="tab-default nav-report-bug">
+                        <span style="position: relative; top: 44px;">PORTAL</span><br/>
+                        <img class="global-nav-report-bug" src="../img/portal.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-report-bug-hover" src="../img/portal-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="#">
+                    <span class="tab-default nav-live-help">
+                        <span style="position: relative; top: 44px;">SETTINGS</span><br/>
+                        <img class="global-nav-live-help" src="../img/settings.png" style="margin: 2px 0px 0px 0px;"><br/>
+                        <img class="global-nav-live-help-hover" src="../img/settings-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="../index.html">
+                    <span class="tab-default nav-log-out">
+                        <span style="position: relative; top: 44px;">LOG OUT</span><br/>
+                        <img class="global-nav-log-out" src="../img/logout.png"><br/>
+                        <img class="global-nav-log-out-hover" src="../img/logout-hover.png" style="margin: 50px 0px 0px 0px;">
+                    </span>
+                </a>
+            </div>
+          </div>
+        </div>
+    <!-- ---------- -->
+    <!-- end header -->
+    <!-- ---------- -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------------------ -->
+    <!-- statistics section -->
+    <!-- ------------------ -->
+    
+    <!-- main top bar -->
+    
+    
+    <!-- main tabs -->
+    <div id="global-main-tabs" style="text-transform:uppercase;">
+        <div class="col-6">
+            <a class="link-regular" href="statistics-overview.html">
+                <span class="tabs-selected">
+                    RECYCLING TOTALS
+                </span>
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="link-regular" href="statistics-carbon.html">
+                <span class="tabs">
+                    Carbon Footprint
+                </span>
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="link-regular" href="statistics-materials.html">
+                <span class="tabs">
+                    Materials Recycled
+                </span>
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="link-regular" href="statistics-facilities.html">
+                <span class="tabs">
+                    Facilities Used
+                </span>
+            </a>
+        </div>
+        
+        <div class="col-6">
+            <a class="link-regular" href="statistics-buildings.html">
+                <span class="tabs">
+                   Building Types
+                </span>
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="link-regular" href="statistics-hauling.html">
+                <span class="tabs no-border">
+                   Hauling Types
+                </span>
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- start charts -->
+    <div id="global-main-content">
+    	
+        <!-- date/time filer -->
+        <div class="row">
+            <div id="statistics-filter">
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="left">
+                        <span class="selected"><span class="icon fa fa fa-clock-o" style="font-size: 20px; margin: 0px 7px 0px 0px; position: relative; top: 2px;"></span>Real-Time Stats</span>
+                        <span class="divider">|</span>
+                        <a class="link-green" href="#">
+                            <span class="icon fa fa-check-square-o" style="font-size: 20px; margin: 0px 6px 0px 0px; position: relative; top: 3px;"></span>Completed Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="column-50 no-border" style="padding: 0;">
+                    <div class="right">
+                        <form name="" method="" action="">
+                            <input class="filter-button" type="reset" type="button" value="Clear" />
+                            <input class="filter-button" type="submit" value="Filter" />
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-to" /></span>
+                            <span style="float: right; padding-left: 9px;">To</span>
+                            <span class="filter-calendar"><input class="input-calendar" type="text" class="span2" placeholder="select date" value="" data-date-format="mm/dd/yy" id="filter-from" /></span>
+                            <span style="float: right;">From</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- statistics title -->
+        <div class="row">
+        	<div id="statistics-title">
+            	Recycling Totals<br/>
+                <span>Salvaged, Recycled, and Disposed In Tons</span>
+            </div>
+        </div>
+        
+        <style>
+        	#chart-donut-container { border: none; margin: 26px auto 0px auto; overflow: hidden; padding: 0; width: 94%; height: auto; }
+			#chart-donut { margin: 0 auto; padding: 0; width: auto; height: 420px; }
+			.highcharts-tooltip span { background: #3c3c3c; border: none; color: #fff; font: normal 10px Arial; line-height: 16px; margin: 0; padding: 6px 8px 6px 8px; text-align: center; width: auto;
+				border-radius: 3px;
+				-khtml-border-radius: 3px;
+				-moz-border-radius: 3px;
+				-ms-border-radius: 3px;
+				-o-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				opacity: 0.9;
+				-khtml-opacity: 0.9;
+				-moz-opacity: 0.9;
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+				filter: alpha(opacity=90);
+				-o-opacity: 0.9;
+				-webkit-opacity: 0.9;
+			}
+			#chart-line-container { border: none; margin: 40px auto 0px auto; overflow: hidden; padding: 0; width: 900px; /*width: 94%;*/ height: auto; }
+			#chart-line { margin: 0 auto; padding: 0; height: 320px; }
+		</style>
+        <!-- chart donut -->
+        <div class="row">
+        	<div id="chart-donut-container">
+            	<div id="chart-donut"></div>
+            </div>
+        </div>
+        <!-- end chart donut -->
+        <!-- chart line -->
+        <div class="row">
+        	<div id="chart-line-container">
+            	<div id="chart-line"></div>
+            </div>
+        </div>
+        <!-- end chart line -->
+       
+    </div>
+    <!-- end charts -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+     <!-- diversion rates -->
+        <div class="row">
+        	<div id="rates-container" style="font: bold 12px Arial !important;  margin: 21px auto 0px auto; padding: 0px; text-align: left; width: 1100px;">
+            	<div class="rates-box" style=" background-color:#ffffff; border: solid 1px #ccc; border-radius: 4px; -khtml-border-radius: 4px; -ms-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; font-size:16px; color:#3c3c3c; -webkit-border-radius: 4px; float: left; margin: 0; padding: 18px 10px 14px 10px; width: 32%;">
+                	Recycled Totals<br>
+                    <div style="padding:15px 0px;" align="center">
+                    	<img src="../img/bar-green.png" />
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#33cc99; font-size:24px; font-weight:bold;">34,520,601.25</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:18px; font-weight:bold;">87%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>average recycled</i></span>
+                    </div>
+                </div>
+                <div style="float: left; margin: 0; padding: 0; width: 2%">&nbsp;</div>
+                <div class="rates-box" style="background-color:#ffffff; border: solid 1px #ccc; border-radius: 4px; -khtml-border-radius: 4px; -ms-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; font-size:16px; color:#3c3c3c; -webkit-border-radius: 4px; float: left; margin: 0; padding: 18px 10px 14px 10px; width: 32%;">
+                	Disposed Totals<br>
+                    <div style="padding:15px 0px;" align="center">
+                    	<img src="../img/bar-red.png" />
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#d90d21; font-size:24px; font-weight:bold;">205,403.52</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:18px; font-weight:bold;">10%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>average reused</i></span>
+                    </div>
+                </div>
+                <div style="float: left; margin: 0; padding: 0; width: 2%;">&nbsp;</div>
+                <div class="rates-box" style="background-color:#ffffff; border: solid 1px #ccc; border-radius: 4px; -khtml-border-radius: 4px; -ms-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; font-size:16px; color:#3c3c3c; -webkit-border-radius: 4px; float: left; margin: 0; padding: 18px 10px 14px 10px; width: 32%;">
+                	Reused Totals<br>
+                    <div style="padding:15px 0px;" align="center">
+                    	<img src="../img/bar-blue.png" />
+                    </div>
+                    <div class="column-50 no-border" style="padding-left:0px !important;">
+                    	<span style="color:#4192d6; font-size:24px; font-weight:bold;">43,502.16</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>total tons disposed</i></span>
+                    </div>
+                    <div class="column-50 no-border" align="right">
+                    	<span style="color:#6c6c6c; font-size:18px; font-weight:bold;">3%</span><br/>
+                        <span style="color:#8c8c8c; font-size:10px;"><i>average reused</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- diversion rates end -->
+    
+    
+    
+    
+    
+    
+    
+    <!-- -------------- -->
+    <!-- footer section -->
+    <!-- -------------- -->
+    
+    <div style="background: #f2f2f2; float: left; width: 100%; height: 50px;">&nbsp;</div>
+    <div id="global-footer">
+    	<div class="content">
+        	<div class="row">
+            	<div class="column-50 no-border left">
+                    <img src="../img/logo.png" width="238" height="58" />
+                </div>
+                <div class="column-50 no-border right">
+                    <a class="link-regular" href="#">Terms of Use</a>
+                    <span>|</span>
+                    <a class="link-regular" href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a class="link-regular" href="#">Contact Us</a>
+                </div>
+            </div>
+            <!--<div class="row">
+            	<div class="line">&nbsp;</div>
+            </div>-->
+            <div class="row">
+            	<div class="copyright">&copy; Copyright 2014 <a class="link-regular" href="http://www.wastetracking.com" target="_blank"><span style="color: #ccc;">WasteTracking.com</span></a>. All rights reserved. WasteTracking brand is a subsidiary of <a class="link-regular" href="http://www.greenhalosystems.com" target="_blank"><span style="color: #ccc;">Green Halo Systems</span></a>.</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ------------- -->
+    <!-- modal windows -->
+    <!-- ------------- -->
+    
+    <!-- suggestions -->
+    <div id="reveal-suggestions" class="reveal-form" style="top: 19%;">
+    	<form id="modal-suggestions-form" name="" method="" action="">
+            <div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Suggestions</div>
+                <div class="form">
+                    <div class="fields">
+                        <div class="left">Name *</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Email *</div>
+                        <div class="right"><input name="" placeholder="Enter page URL" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Page</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Suggestions</div>
+                        <div class="right"><textarea name=""></textarea></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">&nbsp;</div>
+                        <div class="right"><span class="note">Leave your feedback to help make this an easier and faster system for you.</span></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">&nbsp;</div>
+                        <div class="right"><input class="submit-suggestions" type="button" value="Submit"></div>
+                    </div>
+                </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </form>
+        <div id="modal-suggestions-thankyou">
+        	<div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Request Confirmation</div>
+            <div class="thankyou">
+            	<div class="left"><span class="fa fa-check-circle-o" style="color: #bfbfbf; font-size: 75px;"></span></div>
+                <div class="right">Thank you for your submission!<br/><a class="close-reveal-modal ok">OK</a></div>
+            </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!-- report bugs -->
+    <div id="reveal-reportbug" class="reveal-form" style="top: 12%">
+    	<form id="modal-reportbugs-form" name="" method="" action="">
+            <div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Report a Feature Bug</div>
+                <div class="form">
+                    <div class="fields" style="margin-bottom: 30px;">
+                    	<span style="color: #00285e; display: block; font: normal 16px ArialRegular; letter-spacing: .15px; line-height: 18px; text-align: center;">Call Customer Support at 1-888-525-1301</span>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Attention</div>
+                        <div class="right">
+                        	<select>
+                            	<option value="">-- Select Attention --</option>
+                                <option value="">Graphic</option>
+                                <option value="">Programming</option>
+                                <option value="">Graphic / Programming</option>
+                                <option value="">Feature</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Priority</div>
+                        <div class="right">
+                        	<select>
+                            	<option value="">-- Select Priority --</option>
+                                <option value="">High</option>
+                                <option value="">Medium</option>
+                                <option value="">Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Name</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Email</div>
+                        <div class="right"><input name="" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Page</div>
+                        <div class="right"><input name="" placeholder="Enter page URL" type="text" /></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">Bug Report</div>
+                        <div class="right"><textarea name=""></textarea></div>
+                    </div>
+                    <div class="fields">
+                        <div class="left">&nbsp;</div>
+                        <div class="right"><input class="submit-bug" type="button" value="Submit"></div>
+                    </div>
+                </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </form>
+        <div id="modal-reportbugs-thankyou">
+        	<div class="header"><span class="fa fa-comment" style="font-size: 20px; margin: 0px 9px 0px 0px; position: relative; top: 1px;"></span>Request Confirmation</div>
+            <div class="thankyou">
+            	<div class="left"><span class="fa fa-check-circle-o" style="color: #bfbfbf; font-size: 75px;"></span></div>
+                <div class="right">Thank you for your submission!<br/><a class="close-reveal-modal ok">OK</a></div>
+            </div>
+            <a class="close-reveal-modal"><span class="fa fa-times-circle"></span></a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+	
+	
+	
+	
+	<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+	<script type="text/javascript" src="../js/jquery.easing.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+		/* == chart donut ==*/
+		$('#chart-donut').highcharts(
+		{
+			chart: { backgroundColor:'none', border: 'none', margin: [0, 0, 0, 0] },
+			colors: ['#669966', '#85b885', '#295c29'],
+			credits: { enabled: false },
+			plotOptions:
+			{
+				pie:
+				{
+					allowPointSelect: true,
+					borderWidth: 2,
+					cursor: 'pointer',
+					dataLabels:
+					{
+						connectorPadding: 10,
+						enabled: true,
+						format: '<b>{point.name}</b>: {point.y}',
+						style:
+						{
+							fontFamily: 'Arial',
+							fontSize: '10px',
+							fontWeight: 'normal'
+						},
+						useHTML: true 
+					},
+					slicedOffset: 20,
+				}
+			},
+			series:
+			[{
+				allowPointSelect: true,
+				data:
+				[
+					[ 'Reused', 172.01 ],
+					[ 'Recycled', 3947.45 ],
+					[ 'Disposed', 849.58 ],
+				],
+				type: 'pie',
+				innerSize: '50%',
+				name: '',
+				states: { hover: { enabled: false } }
+			}],
+			title: { text: '' },
+			tooltip:
+			{
+				backgroundColor: 'rgba(255, 255, 255, 0)', borderWidth: 0, enabled: true, headerFormat: '', shadow: false, useHTML: true,
+				formatter: function ()
+				{
+					return '<span style="color: #fff;"><b>' + this.point.name + '</b>: ' + this.point.y + ' (' + Highcharts.numberFormat(this.percentage, 1) + '%)</span>';
+				}
+			}
+		});
+		
+		
+		
+		
+		/* == chart line == */
+		$('#chart-line').highcharts(
+		{
+			chart: { backgroundColor: 'none', type: 'line', height: 320, },
+			colors: ['#669966', '#85b885', '#295c29'],
+			credits: { enabled: false },
+			title: { text: '' },
+			legend: { enabled: false },
+			xAxis: {
+				categories: ["Jan '14", "Feb '14", "Mar '14", "Apr '14", "May '14", "Jun '14", "Jul '14", "Aug '14", "Sep '14", "Oct '14", "Nov '14", "Dec '14"],
+				labels: { style: { color: '#4c4c4c', font: 'normal 10px ArialRegular' } },
+			},
+			yAxis: {
+				min: 0,
+				gridLineDashStyle: 'line',
+				gridLineColor: '#d8dadb',
+				labels: { style: { color: '#4c4c4c', font: 'normal 10px ArialRegular' } },
+				title: { text: 'In Tons', style: { color: '#4c4c4c', font: 'normal 10px ArialRegular' }, margin: 20 }
+			},
+			plotOptions:
+			{
+				column:
+				{
+					borderWidth: 0,
+					dataLabels:
+					{
+						 enabled: true,
+						 style: { color: '#fff', fontSize: '10px', fontWeight: 'bold' },
+						 y: -3,
+					},
+					pointPadding: 0.2,
+					series: { allowPointSelect: true },
+				},
+			},
+			series:
+			[{
+				name: 'Reused',
+				data: [0, 0, 0, 225.25, 0, 0, 0, 0, 340.34, 0, 0],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			{
+				name: 'Recycled',
+				data: [270.27, 52.25, 25.52, 270.72, 340.43, 430.34, 520.25, 1510.70, 1744.81, 746.58, 520.34, 250.52],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			{
+				name: 'Disposed',
+				data: [52.16, 0, 0, 0, 0, 16.61, 205.07, 25.70, 703.16, 7.07, 0, 17.70],
+				lineWidth: 2,
+				marker: { fillColor: '#fff', lineWidth: 2, lineColor: null, radius: 4, symbol: 'circle', },
+			},
+			],
+			tooltip:
+			{
+				backgroundColor: 'rgba(255, 255, 255, 0)', borderWidth: 0, enabled: true, headerFormat: '<span style="color: #fff;"><b>{point.key}</b></span>', pointFormat: '<span style="color: #fff;"><b>{series.name}</b>: {point.y}</span>', shadow: false, useHTML: true
+				
+			}
+		});
+	</script>
+    
+    <script>
+    	function test() {
+			var chart = $('#chart-donut').highcharts();
+        //chart.xAxis[0].setColors(['#000']);
+        
+        	chart.setOptions(
+			{
+				colors: ['#669966', '#85b885', '#295c29']
+			});
+		}
+		test();
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

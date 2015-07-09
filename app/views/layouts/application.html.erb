@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gh</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+
+  <% if current_temporary_user %>
+      <div id="global-header">
+    	<div class="header-logo-and-support">
+        	<div class="column-50 no-border" style="font-size:12px !important;">
+            	<!-- <img src="../img/logo-sml.png" width="140" height="34" style="margin-right: 10px;"> -->
+            	<%= image_tag "img/logo-sml.png" ,:style => "margin-right: 10px;"%>
+            	LOGGED IN:  <b><%= current_temporary_user.first_name %></b>
+            </div>
+            <div class="column-50 no-border" align="right" style="font-size:12px !important;">
+            	<div>Live Help / Tech Support   -   <%= current_temporary_user.phone %></div>
+            </div>
+        </div>
+       
+    </div>
+
+
+    	 <!-- global nav -->
+        <div class="header-nav">
+          <div style="max-width:1100px; margin:0 auto;">
+          	<!--<div class="grid-10 tab">
+            	<a class="link-regular" href="#">
+                    <span class="tab-default-right-shadow">
+                        <span style="position: relative; top: 15px;">
+                        	<img src="../img/logo-sml.png" width="140" height="34" style="margin: 2px 0px 0px 0px;">
+                        </span>
+                    </span>
+                </a>
+            </div>-->
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-dashboard.html">
+                    <span class="tab-selected nav-statistics-selected">
+                        <span style="position: relative; top: 44px;">CREATE</span><br/>
+                        <img class="global-nav-add" src="<%= image_path('img/create.png') %>">
+                    </span>
+                </a>
+            </div>
+            
+        	<div class="grid-10 tab">
+            	<a class="link-regular" href="admin-add-data.html">
+                    <span class="tab-default-right-shadow nav-home">
+                        <span style="position: relative; top: 44px;">ADD DATA</span><br/>
+
+      
+
+                      <%= image_tag "img/adddata.png" ,:class => "global-nav-projects" %>
+                        <br/>
+                        <%= image_tag "img/adddata-hover.png" ,:class => "global-nav-projects-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+             
+                    </span>
+                </a>
+            </div>
+
+
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-statistics.html">
+                    <span class="tab-default-right-shadow nav-statistics">
+                        <span style="position: relative; top: 44px;">STATISTICS</span><br/>
+
+                        
+                        <%= image_tag "img/statistics.png" ,:class => "global-nav-statistics" %>
+                        <br/>
+
+                        <%= image_tag "img/statistics-hover.png" ,:class => "global-nav-statistics-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+                         
+                    </span>
+                </a>
+            </div>
+
+
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-tools.html">
+                    <span class="tab-default-left-shadow nav-settings">
+                        <span style="position: relative; top: 44px;">TOOLS</span><br/>
+
+                         <%= image_tag "img/tools.png" ,:class => "global-nav-settings" %><br/>
+                         <%= image_tag "img/tools-hover.png" ,:class => "global-nav-settings-hover" ,:style => "margin: 50px 0px 0px 0px;	" %>
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-organise.html">
+                    <span class="tab-default nav-recycler-search">
+                        <span style="position: relative; top: 44px;">ORGANIZE</span><br/>
+
+                     
+
+                        <%= image_tag "img/organise.png" ,:class => "global-nav-recycler-search" %>
+                        <br/>
+                        <%= image_tag "img/organise-hover.png" ,:class => "global-nav-recycler-search-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-bragit.html">
+                    <span class="tab-default nav-suggestions">
+                        <span style="position: relative; top: 44px;">BRAG IT</span><br/>
+
+                    
+
+                         <%= image_tag "img/bragit.png" ,:class => "global-nav-suggestions" ,:style => "margin: 2px 0px 0px 0px;" %>
+                   
+                        <br/>
+                        <%= image_tag "img/bragit-hover.png" ,:class => "global-nav-suggestions-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-portal.html">
+                    <span class="tab-default nav-report-bug">
+                        <span style="position: relative; top: 44px;">PORTAL</span><br/>
+
+
+                        <%= image_tag "img/portal.png" ,:class => "global-nav-report-bug" ,:style => "margin: 2px 0px 0px 0px;" %>
+                       <br/>
+                       <%= image_tag "img/portal-hover.png" ,:class => "global-nav-report-bug-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<a class="link-regular" href="admin-settings.html">
+                    <span class="tab-default nav-live-help">
+                        <span style="position: relative; top: 44px;">SETTINGS</span><br/>
+
+                         <%= image_tag "img/settings.png" ,:class => "global-nav-live-help" ,:style => "margin: 2px 0px 0px 0px;" %>
+                        <br/>
+                        <%= image_tag "img/settings-hover.png" ,:class => "global-nav-live-help-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+                    </span>
+                </a>
+            </div>
+            <div class="grid-10 tab">
+            	<!-- <a class="link-regular" href="../index.html"> -->
+                    <span class="tab-default nav-log-out">
+                        <span style="position: relative; top: 44px;">LOG OUT</span><br/>
+
+                        <%#= image_tag "img/logout.png" ,:class => "global-nav-log-out" %>
+                        <%= link_to image_tag("img/logout.png" , :title => 'Logout' ) ,destroy_temporary_user_session_path , :method => :delete %>
+                        <br/>
+                        <%= image_tag "img/logout-hover.png" ,:class => "global-nav-log-out-hover" ,:style => "margin: 50px 0px 0px 0px;" %>
+
+                    </span>
+               <!--  </a> -->
+            </div>
+          </div>
+        </div>
+ <%else%>
+
+
+    
+    <!-- header start -->
+    <div id="header">
+      <div class="header-bg"></div>
+      <div class="container main">
+          <div class="row">
+              <div class="col-sm-3 logo">
+                   <!-- <a class="linktomain" href="#home"><img src="<%#= asset_path '_images/global/logo.png' %>"></a>  -->
+
+                     <%=link_to( image_tag('_images/global/logo.png'), root_path, :class=>"linktomain") %>
+
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                      <li class="nav-home">
+                            <!--  <a href="#home">home</a>  -->
+                            <%= link_to "home" , root_path %>
+                        </li>
+
+                        <li>
+                            <!-- <a href="#ourproducts"> -->
+                                <span>our</span> <%= link_to "products" ,'#ourproducts' %></li>
+
+                        <li>
+                            <!-- <a href="#whatwedo"> --><span>what</span>
+                            <%= link_to "we do" ,'#whatwedo' %>
+                             <!-- we do</a> -->
+                         </li>
+                        <li>
+                            <!-- <a href="#whoweare/contact"> -->
+                                <span>who</span>
+                                <%= link_to "we are" ,'#whoweare/contact' %>
+                                <!--  we are</a> -->
+                             </li>
+                        <li>
+                           <!--  <a class="orange" href="#scheduleademo">schedule a demo</a> -->
+                           <%= link_to "schedule a demo",'#scheduleademo' %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                  <div class="chat">
+                      <span>
+                            <!-- <a href="#">talk trash live</a>  -->
+                            <%= link_to "talk trash live" ,'#' %>
+                            or 888 525 1301</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                  <div id="nav-selected-states">
+                      <span class="selected-ourproducts">&nbsp;</span>
+                        <span class="selected-whatwedo">&nbsp;</span>
+                        <span class="selected-whoweare">&nbsp;</span>
+                        <span class="selected-demo">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <!--<a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -36px; right: 5%;"></div></a>-->
+        <a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -38px; right: 5%;"></div></a>
+        <div id="nav-small">
+          <div class="nav-small-bg"></div>
+            <div class="container">
+              <div class="row">
+                  <div class="col-sm-10" style="padding-left: 25px !important;">
+                      <div class="nav-small-main">
+                                <p><a class="small-home" href="#home"><span>our</span>home</a></p>
+                            <p><a class="small-products" href="#ourproducts"><span>our</span> products</a></p>
+                            <p><a class="small-whatwedo" href="#whatwedo"><span>what</span> we do</a></p>
+                            <p><a class="small-whoweare" href="#whoweare"><span>who</span> we are</a></p>
+                            <p><a class="small-demo" class="orange" href="#scheduleademo">schedule a demo</a></p>
+                            <p style="color: #ececec;"><a class="small-chat" href="#"><span>talk trash live</span></a> or 888 525 1301</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+    </div>
+  <%end%>
+<body>
+
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<% if @admins.nil? %>
+  <h1> incorrect login </h1>   
+<% else %>
+<%#= render :file => '/ghs_project/app/views/admins/dashboard.html.erb' %>
+  <%#= render partial: "admins/dashboard" %>
+  <%= render :partial => "admin_dashboard" %>
+  <%#= render partial: "" %>
+<% end %>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+    <title>Waste Diversion and Recycling Tracking System - Green Halo - The Leader in Waste Tracking Solution</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="CODE77® and Green Halo" />
+    <meta name="resource-type" content="document" />
+    <meta name="description" content="Track waste and recycling from construction projects, buildings, schools and businesses and generate comprehensive reports and analytics. Waste Tracking made easy!" />
+    <meta name="keywords" content="WasteTracking.com, Waste Tracking, Waste Tracking Software, Waste and recycling, waste management, waste management plans,  LEED, LEED Pointstrack waste, track recycling, track garbage, garbage, Waste from schools, waste from business, waste from oil, waste from construction, construction, construction debris, demolition debris, comingled materials, mixed C&D,  scale, scale house, weight tag, online weight scale, project management, track, tracker, tracking, trash, recycling, recycle, recycle waste, recycling software, cloud based, online, web based, required, mandate, CALGreen, divert, diversion, diversion rate, diversion report, diversion reporting, biohazard, hazardous waste, medical waste, liquid waste, waste stream, waste flows, building waste stream, source separation, recyclables, chain of custody, reporting, property management, building owner, site manager, super intendant, Green, green policy, zero waste policy, zero waste,  no waste, green building, green contractor, contractor, subcontractor, organization, USGBC, CRRA, Rubbermaid, Turner, Kiewit, allied waste, republic waste, garbage company, trash company, recycling company, debris box, waste company, online waste tracking, online waste tracking system, online waste reporting, no install, web based, browser based, Green Halo, Green Halo Systems, CalGreen Compliance, Commercial Builders, Construction Waste Planning, Construction Recycling, Construction Waste Management, Corporate Sustainability, Demolition, Diversion Reporting, Green Movement, Hauling, Home Builders, Home Developers, Home Remodelers, LEED Compliance, LEED Recycling, Recycling Facilities, Sub Contractor Monitoring, Waste Recycling, Waste Reporting, Waste Reduction, Waste Tracking, clean harbors, stericycle, waste connections, progressive waste solutions, advanced disposal services, recology, waste pro, waste professional, recycling professional, LEED AP, Covanta energy, medical waste, medical disposal, medical waste management, medical waste disposal, disposal of medical waste, management of medical waste, medical waste management and disposal, biomedical waste, sharps containers, sharps disposal, syringe disposal, sharps container disposal, medical waste disposal companies, medical disposal companies, medical waste disposal company, medical waste management companies ,medical waste California, California medical waste, reuse, salvage, donate, landfill, hazardous waste, hazardous disposal, hazardous waste management, hazardous waste disposal, disposal of hazardous waste, management of hazardous waste, hazardous waste management and disposal, biohazardous waste, hazardous waste disposal companies, hazardous disposal companies, hazardous waste disposal company, hazardous waste management companies ,hazardous waste california, california hazardous waste, liquid waste, liquid disposal, liquid waste management, liquid waste disposal, disposal of liquid waste, management of liquid waste, liquid waste management and disposal, bioliquid waste, liquid waste disposal companies, liquid disposal companies, liquid waste disposal company, liquid waste management companies ,liquid waste california, california liquid waste, Tracking Act of 1988, first, best, only, nation wide, national, coast to coast, EBBY,  wate tracking, waste traking, hauling, hauler, debris, rubbish, statistics, waste statistics, monitor waste, waste monitoring, proof of recycling, proof of disposal, disposal verification, liability, waste accounting, accounting system for waste, accounting system for trash, custom software, custom waste solutions, cloud based, mobile tracking, recycling requirements, waste management plan, LEED recycling, LEED Version 4, LEED v4, Green building, property owner, building owner, how to recycle, where to recycle, what to recycle, debris box, dumpster, demolition, demolition recycling, recycling Canada, recycling Europe, recycling asia, recycling Australia, recycling law, city tracker, waste tracker, re-trac, waste cap trace, stopwaste.org, greenhalosystems.com, green halo, green halo systems, emerge knowledge, WM, earth 911, eco friendly, environment, environmental awareness, illegal dumping, wood recycling, plastic recycling, recyclerfinder.com, find recycling facilities, recycling center, recycling locator, landfill, transfer station, recycling certification, San Francisco, New York, Boston, Los Angeles, Dallas, Chicago, Austin, Houston, San Diego, San Jose, community recycling, ewaste, ewaste drive, e-waste, nuclear waste, toxic waste, solid waste, CCSWA, Contra Costa, Walnut Creek, Seattle, Tacoma, Vancouver, Toronto, Montreal, Edmonton, Alberta, Quebec, Miami, Charlotte, New Jersey, Washington DC, EPA, VA, Department of Energy, Department of Defense, Government recycling, GreenBuild, department of forestry, veterans affairs, army corps of engineers, military waste, government waste, retail waste, airport waste, garbage system, garbage bag, trash can, composting, how to compost, twitter, facebook, google, apple, yahoo, recycling manual, recycling system, my trash, mywastetracker, wastetracker, track my waste, garbage truck, pc scale house, scale, manufacturing waste, garbage bin, wall street waste, wall street, Bloomberg, cnn, recycling news" />
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="<%= asset_path '_lib/css/vendor/bootstrap-v3.3.1-revised.css' %>" />
+    <link rel="stylesheet" type="text/css" href="<%= asset_path '_lib/css/vendor/jquery.fullpage.css' %>" />
+    <link rel="stylesheet" type="text/css" href="<%= asset_path '_lib/css/vendor/font-awesome.css' %>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<%= asset_path '_lib/css/styles.css' %>" />
+    
+    <style>
+    	html, body { background: #efefef; }
+    </style>
+    
+</head>
+
+<body style="margin: 0; padding: 0;">
+
+
+
+
+
+
+
+
+
+	<!-- header start -->
+    <div id="header">
+    	<div class="header-bg"></div>
+    	<div class="container main">
+        	<div class="row">
+            	<div class="col-sm-3 logo">
+                	<a class="linktomain" href="#home"><img src="<%= asset_path '_images/global/logo.png' %>"></a>
+                </div>
+                <div class="col-sm-6">
+                	<ul>
+                    	<li class="nav-home"><a href="/admins/id">home</a></li>
+                        <li><a href="/admins/id#ourproducts"><span>our</span> products</a></li>
+                        <li><a href="/admins/id#whatwedo"><span>what</span> we do</a></li>
+                        <li><a href="/admins/id#whoweare"><span>who</span> we are</a></li>
+                        <li><a class="orange" href="/admins/id#scheduleademo">schedule a demo</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                	<div class="chat">
+                    	<span><a href="http://messenger.providesupport.com/messenger/greenhalo.html" target="_blank">talk trash live</a> or 888 525 1301</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <!--<a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -36px; right: 5%;"></div></a>-->
+        <a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -38px; right: 5%;"></div></a>
+        <div id="nav-small">
+        	<div class="nav-small-bg"></div>
+            <div class="container">
+            	<div class="row">
+                	<div class="col-sm-10" style="padding-left: 25px !important;">
+                    	<div class="nav-small-main">
+                            <p><a class="small-home" href="index.html"><span>our</span>home</a></p>
+                            <p><a class="small-products" href="index.html#ourproducts"><span>our</span> products</a></p>
+                            <p><a class="small-whatwedo" href="index.html#whatwedo"><span>what</span> we do</a></p>
+                            <p><a class="small-whoweare" href="index.html#whoweare"><span>who</span> we are</a></p>
+                            <p><a class="small-demo" class="orange" href="index.html#scheduleademo">schedule a demo</a></p>
+                            <p style="color: #ececec;"><a class="small-chat" href="#"><span>talk trash live</span></a> or 888 525 1301</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+    </div>
+    <!-- header end -->
+    
+    <!-- social media -->
+    <div id="social-media-container">
+    	<div class="icon">
+        	<img class="solution-social-facebook" src="<%= asset_path '_images/global/icon-facebook-24.png' %>" />
+            <span class="facebook-tip">
+            	<a href="https://www.facebook.com/greenhalosystems" target="_blank"><img src="<%= asset_path '_images/global/icon-facebook-like.png' %>" /></a><a onclick="return fbs_click()"><img src="<%= asset_path '_images/global/icon-facebook-share.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-linkedin" src="<%= asset_path '_images/global/icon-linkedin-24.png' %>" />
+            <span class="linkedin-tip">
+            	<a href="https://www.linkedin.com/company/green-halo-systems" target="_blank"><img src="<%= asset_path '_images/global/icon-linkedin-connect.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-wordpress" src="<%= asset_path '_images/global/icon-wordpress-24.png' %>" />
+            <span class="wordpress-tip">
+            	<a href="https://mygreenhalo.wordpress.com" target="_blank"><img src="<%= asset_path '_images/global/icon-wordpress-read.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-twitter" src="<%= asset_path '_images/global/icon-twitter-24.png' %>" />
+            <span class="twitter-tip">
+            	<a href="https://twitter.com/greenhalousa" target="_blank"><img src="<%= asset_path '_images/global/icon-twitter-follow.png' %>" /></a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fwww.greenhalosytems.com" target="_blank"><img src="<%= asset_path '_images/global/icon-twitter-share.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img src="<%= asset_path '_images/global/icon-empty-24.png' %>" />
+            <span>
+            	<img src="<%= asset_path '_images/global/icon-empty-24.png' %>" />
+            </span>
+        </div>
+    </div>
+    <!-- social media end -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="fullpage">
+    	<div class="section gradient" id="section0">
+        	<div id="main-createaccount">
+                <form action="/admins/confirm" id="form-account" method="GET" name="parameters">
+                	<div class="container box">
+                    	<div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <p class="header">Complete Registration</p>
+                                <p>Please confirm all the following information below are correct. Click back to make changes, otherwise click Confirm to submit your information.</p>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <div id="account-form">
+                                    <p class="label">Log In Profile</p>
+                                    <p class="input" style="margin-top: 4px;">user name:<%= params["email"] %></span></p>
+                                    <p class="input">password:<span>view</span></p>
+                                    <p class="label" style="margin-top: 21px;">&nbsp;</p>
+                                    <p class="label">User Profile</p>
+                                    <p class="input">first name:<%= params["name"] %></p>
+                                    <p class="input">last name:<%= params["lname"] %></p>
+                                    <p class="input">position:<%= params["pos"] %></p>
+                                    <p class="input">company name:<%= params["com"] %></p>
+                                    <p class="input">company website:<%= params["web"] %></p>
+                                    <p class="input">address 1:<%= params["addr"] %></p>
+                                    <p class="input">address 2:<%= params["addr2"] %></span></p>
+                                    <p class="input">zip code:<%= params["zip"] %></p>
+                                    <p class="input">phone:<%= params["phone"] %></p>
+                                    <p class="input">how you heard about us:<span id="heard"></span></p>
+                                    <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="container" style="width: 100%; height: 75px;">&nbsp;</div>
+                <div id="footer-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="footer-logo">
+                                    <img src="<%= asset_path '_images/global/logo-footer.png' %>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="footer-links">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2">
+                                <div class="links">
+                                    <p><span class="header">Company</span></p>
+                                    <p><a href="/admins/id#ourproducts"><span class="green">green halo</span> products</a></p>
+                                    <p><a href="/admins/id#whatwedo"><span class="green">green halo</span> services</a></p>
+                                    <p><a href="/admins/id#whatwedo">about <span class="green">green halo</span></a></p>
+                                    <p><a href="/admins/id#whatwedo">contact <span class="green">green halo</span></a></p>
+                                    <p>&nbsp;</p>
+                                    <p><a class="orange" href="/admins/id#scheduleademo">schedule a demo</a></p>
+                                    <p>&nbsp;</p>
+                                    <p><a href="https://mygreenhalo.wordpress.com" target="_blank"><span class="green">green halo</span> news</a></p>
+                                    <p><a href="https://twitter.com/greenhalousa" target="_blank"><span class="green">green halo</span> tweets</a></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="links">
+                                    <p><span class="header">Quick Links</span></p>
+                                    <p><a href="http://www.calgreenreporting.com" target="_blank">calgreen reporting</a></p>
+                                    <p><a href="#">consturction recycling</a></p>
+                                    <p><a href="#">diversion report</a></p>
+                                    <p><a href="#">LEED reporting</a></p>
+                                    <p><a href="http://www.sourceseparating.com" target="_blank">source separating</a></p>
+                                    <p><a href="#">track recycling</a></p>
+                                    <p><a href="http://wasteflows.com" target="_blank">waste flows</a></p>
+                                    <p><a href="http://www.wastemanagementplan.com" target="_blank">waste management</a></p>
+                                    <p><a href="http://www.wastetracking.com" target="_blank">waste tracking</a></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="links">
+                                    <p><span class="header">Social Media</span></p>
+                                    <p><a href="https://www.facebook.com/greenhalosystems" target="_blank"><span class="green">green halo</span> on facebook</a></p>
+                                    <p><a href="https://www.linkedin.com/company/green-halo-systems" target="_blank"><span class="green">green halo</span> on linkedin</a></p>
+                                    <p><a href="https://twitter.com/greenhalousa" target="_blank"><span class="green">green halo</span> on twitter</a></p>
+                                    <p><a href="https://mygreenhalo.wordpress.com" target="_blank"><span class="green">green halo</span> on wordpress</a></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="links">
+                                    <p><span class="header">Partners</span></p>
+                                    <p><a href="http://www.boma.org" target="_blank">boma international</a></p>
+                                    <p><a href="http://www.cdrecycling.org" target="_blank">CMRA</a></p>
+                                    <p><a href="http://greenglobe.com" target="_blank">green globe</a></p>
+                                    <p><a href="http://www.stopwaste.org" target="_blank">stopwaste.org</a></p>
+                                    <p><a href="http://www.usgbc.org" target="_blank">USGBC</a></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <p style="color: #ccc; line-height: 20px;">Recycling today’s resources for tomorrow’s generations.</p>
+                                <p class="support" style="color: #6c6c6c; line-height: 20px;">For customer and technical support, please call us at 888 525 1301, M - F 8AM - 5PM PST</p>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row" id="footer-links">
+                            <div class="col-sm-6">
+                                <p class="copyright-left">
+                                    &copy; Copyright 2015 Green Halo Systems Inc.<span></span>All rights reserved.<br>
+                                    521 Charcot Avenue, San Jose, CA 95131<span></span>888 525 1301<span></span><a href="mailto:hello@greenhalo.com">hello@greenhalo.com</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="copyright-right">
+                                <a href="/admins/terms">Terms &amp; Conditions</a><span></span><a href="admins/policies">Policies</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+    
+    
+    
+    <!--<script type="text/javascript" src="_lib/js/vendor/jquery.1.11.0.min.js"></script>
+    <script type="text/javascript" src="_lib/js/vendor/jquery-ui.1.11.0.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.slimscroll.min.js' %>"></script>
+	<script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.fullpage.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.cycle.lite.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count2.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count3.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/location.js' %>"></script>
+	<script type="text/javascript" src="<%= asset_path '_lib/js/scripts.js' %>"></script>
+	<script>
+		
+		(function(e){function t(){var e=document.createElement("input"),t="onpaste";return e.setAttribute(t,""),"function"==typeof e[t]?"paste":"input"}var n,a=t()+".mask",r=navigator.userAgent,i=/iphone/i.test(r),o=/android/i.test(r);e.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},dataName:"rawMaskFn",placeholder:"_"},e.fn.extend({caret:function(e,t){var n;if(0!==this.length&&!this.is(":hidden"))return"number"==typeof e?(t="number"==typeof t?t:e,this.each(function(){this.setSelectionRange?this.setSelectionRange(e,t):this.createTextRange&&(n=this.createTextRange(),n.collapse(!0),n.moveEnd("character",t),n.moveStart("character",e),n.select())})):(this[0].setSelectionRange?(e=this[0].selectionStart,t=this[0].selectionEnd):document.selection&&document.selection.createRange&&(n=document.selection.createRange(),e=0-n.duplicate().moveStart("character",-1e5),t=e+n.text.length),{begin:e,end:t})},unmask:function(){return this.trigger("unmask")},mask:function(t,r){var c,l,s,u,f,h;return!t&&this.length>0?(c=e(this[0]),c.data(e.mask.dataName)()):(r=e.extend({placeholder:e.mask.placeholder,completed:null},r),l=e.mask.definitions,s=[],u=h=t.length,f=null,e.each(t.split(""),function(e,t){"?"==t?(h--,u=e):l[t]?(s.push(RegExp(l[t])),null===f&&(f=s.length-1)):s.push(null)}),this.trigger("unmask").each(function(){function c(e){for(;h>++e&&!s[e];);return e}function d(e){for(;--e>=0&&!s[e];);return e}function m(e,t){var n,a;if(!(0>e)){for(n=e,a=c(t);h>n;n++)if(s[n]){if(!(h>a&&s[n].test(R[a])))break;R[n]=R[a],R[a]=r.placeholder,a=c(a)}b(),x.caret(Math.max(f,e))}}function p(e){var t,n,a,i;for(t=e,n=r.placeholder;h>t;t++)if(s[t]){if(a=c(t),i=R[t],R[t]=n,!(h>a&&s[a].test(i)))break;n=i}}function g(e){var t,n,a,r=e.which;8===r||46===r||i&&127===r?(t=x.caret(),n=t.begin,a=t.end,0===a-n&&(n=46!==r?d(n):a=c(n-1),a=46===r?c(a):a),k(n,a),m(n,a-1),e.preventDefault()):27==r&&(x.val(S),x.caret(0,y()),e.preventDefault())}function v(t){var n,a,i,l=t.which,u=x.caret();t.ctrlKey||t.altKey||t.metaKey||32>l||l&&(0!==u.end-u.begin&&(k(u.begin,u.end),m(u.begin,u.end-1)),n=c(u.begin-1),h>n&&(a=String.fromCharCode(l),s[n].test(a)&&(p(n),R[n]=a,b(),i=c(n),o?setTimeout(e.proxy(e.fn.caret,x,i),0):x.caret(i),r.completed&&i>=h&&r.completed.call(x))),t.preventDefault())}function k(e,t){var n;for(n=e;t>n&&h>n;n++)s[n]&&(R[n]=r.placeholder)}function b(){x.val(R.join(""))}function y(e){var t,n,a=x.val(),i=-1;for(t=0,pos=0;h>t;t++)if(s[t]){for(R[t]=r.placeholder;pos++<a.length;)if(n=a.charAt(pos-1),s[t].test(n)){R[t]=n,i=t;break}if(pos>a.length)break}else R[t]===a.charAt(pos)&&t!==u&&(pos++,i=t);return e?b():u>i+1?(x.val(""),k(0,h)):(b(),x.val(x.val().substring(0,i+1))),u?t:f}var x=e(this),R=e.map(t.split(""),function(e){return"?"!=e?l[e]?r.placeholder:e:void 0}),S=x.val();x.data(e.mask.dataName,function(){return e.map(R,function(e,t){return s[t]&&e!=r.placeholder?e:null}).join("")}),x.attr("readonly")||x.one("unmask",function(){x.unbind(".mask").removeData(e.mask.dataName)}).bind("focus.mask",function(){clearTimeout(n);var e;S=x.val(),e=y(),n=setTimeout(function(){b(),e==t.length?x.caret(0,e):x.caret(e)},10)}).bind("blur.mask",function(){y(),x.val()!=S&&x.change()}).bind("keydown.mask",g).bind("keypress.mask",v).bind(a,function(){setTimeout(function(){var e=y(!0);x.caret(e),r.completed&&e==x.val().length&&r.completed.call(x)},0)}),y()}))}})})(jQuery);
+		
+		function addComment()
+		{
+			var parameters = location.search.substring(1).split("&");
+
+			var temp = parameters[0].split("=");
+			email = unescape(temp[1]);
+			var temp = parameters[1].split("=");
+			password = unescape(temp[1]);
+			var temp = parameters[4].split("=");
+			firstname = unescape(temp[1]);
+			var temp = parameters[5].split("=");
+			lastname = unescape(temp[1]);
+			var temp = parameters[6].split("=");
+			position = unescape(temp[1]);
+			var temp = parameters[7].split("=");
+			companyname = unescape(temp[1]);
+			var temp = parameters[8].split("=");
+			companywebsite = unescape(temp[1]);
+			var temp = parameters[9].split("=");
+			address1 = unescape(temp[1]);
+			var temp = parameters[10].split("=");
+			address2 = unescape(temp[1]);
+			var temp = parameters[11].split("=");
+			zipcode = unescape(temp[1]);
+			var temp = parameters[12].split("=");
+			phone = unescape(temp[1]);
+			var temp = parameters[13].split("=");
+			heard = unescape(temp[1]);
+	
+			document.getElementById("email").innerHTML = email;
+			//document.getElementById("password").innerHTML = password;
+			document.getElementById("firstname").innerHTML = firstname;
+			document.getElementById("lastname").innerHTML = lastname;
+			document.getElementById("position").innerHTML = position;
+			document.getElementById("companyname").innerHTML = companyname;
+			document.getElementById("companywebsite").innerHTML = companywebsite;
+			document.getElementById("address1").innerHTML = address1;
+			document.getElementById("address2").innerHTML = address2;
+			document.getElementById("zipcode").innerHTML = zipcode;
+			document.getElementById("phone").innerHTML = phone;
+			document.getElementById("heard").innerHTML = heard;
+		}
+		addComment();
+		
+		
+		var address1 = $('#address1');
+		address1.html(address1.html().replace(/\+/gi, " "));
+		var address2 = $('#address2');
+		address2.html(address2.html().replace(/\+/gi, " "));
+		var heard = $('#heard');
+		heard.html(heard.html().replace(/\+/gi, " "));
+		
+		
+	</script>
+
+</body>
+
+</html>

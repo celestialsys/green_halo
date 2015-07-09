@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+    <title>Waste Diversion and Recycling Tracking System - Green Halo - The Leader in Waste Tracking Solution</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="CODE77® and Green Halo" />
+    <meta name="resource-type" content="document" />
+    <meta name="description" content="Track waste and recycling from construction projects, buildings, schools and businesses and generate comprehensive reports and analytics. Waste Tracking made easy!" />
+    <meta name="keywords" content="WasteTracking.com, Waste Tracking, Waste Tracking Software, Waste and recycling, waste management, waste management plans,  LEED, LEED Pointstrack waste, track recycling, track garbage, garbage, Waste from schools, waste from business, waste from oil, waste from construction, construction, construction debris, demolition debris, comingled materials, mixed C&D,  scale, scale house, weight tag, online weight scale, project management, track, tracker, tracking, trash, recycling, recycle, recycle waste, recycling software, cloud based, online, web based, required, mandate, CALGreen, divert, diversion, diversion rate, diversion report, diversion reporting, biohazard, hazardous waste, medical waste, liquid waste, waste stream, waste flows, building waste stream, source separation, recyclables, chain of custody, reporting, property management, building owner, site manager, super intendant, Green, green policy, zero waste policy, zero waste,  no waste, green building, green contractor, contractor, subcontractor, organization, USGBC, CRRA, Rubbermaid, Turner, Kiewit, allied waste, republic waste, garbage company, trash company, recycling company, debris box, waste company, online waste tracking, online waste tracking system, online waste reporting, no install, web based, browser based, Green Halo, Green Halo Systems, CalGreen Compliance, Commercial Builders, Construction Waste Planning, Construction Recycling, Construction Waste Management, Corporate Sustainability, Demolition, Diversion Reporting, Green Movement, Hauling, Home Builders, Home Developers, Home Remodelers, LEED Compliance, LEED Recycling, Recycling Facilities, Sub Contractor Monitoring, Waste Recycling, Waste Reporting, Waste Reduction, Waste Tracking, clean harbors, stericycle, waste connections, progressive waste solutions, advanced disposal services, recology, waste pro, waste professional, recycling professional, LEED AP, Covanta energy, medical waste, medical disposal, medical waste management, medical waste disposal, disposal of medical waste, management of medical waste, medical waste management and disposal, biomedical waste, sharps containers, sharps disposal, syringe disposal, sharps container disposal, medical waste disposal companies, medical disposal companies, medical waste disposal company, medical waste management companies ,medical waste California, California medical waste, reuse, salvage, donate, landfill, hazardous waste, hazardous disposal, hazardous waste management, hazardous waste disposal, disposal of hazardous waste, management of hazardous waste, hazardous waste management and disposal, biohazardous waste, hazardous waste disposal companies, hazardous disposal companies, hazardous waste disposal company, hazardous waste management companies ,hazardous waste california, california hazardous waste, liquid waste, liquid disposal, liquid waste management, liquid waste disposal, disposal of liquid waste, management of liquid waste, liquid waste management and disposal, bioliquid waste, liquid waste disposal companies, liquid disposal companies, liquid waste disposal company, liquid waste management companies ,liquid waste california, california liquid waste, Tracking Act of 1988, first, best, only, nation wide, national, coast to coast, EBBY,  wate tracking, waste traking, hauling, hauler, debris, rubbish, statistics, waste statistics, monitor waste, waste monitoring, proof of recycling, proof of disposal, disposal verification, liability, waste accounting, accounting system for waste, accounting system for trash, custom software, custom waste solutions, cloud based, mobile tracking, recycling requirements, waste management plan, LEED recycling, LEED Version 4, LEED v4, Green building, property owner, building owner, how to recycle, where to recycle, what to recycle, debris box, dumpster, demolition, demolition recycling, recycling Canada, recycling Europe, recycling asia, recycling Australia, recycling law, city tracker, waste tracker, re-trac, waste cap trace, stopwaste.org, greenhalosystems.com, green halo, green halo systems, emerge knowledge, WM, earth 911, eco friendly, environment, environmental awareness, illegal dumping, wood recycling, plastic recycling, recyclerfinder.com, find recycling facilities, recycling center, recycling locator, landfill, transfer station, recycling certification, San Francisco, New York, Boston, Los Angeles, Dallas, Chicago, Austin, Houston, San Diego, San Jose, community recycling, ewaste, ewaste drive, e-waste, nuclear waste, toxic waste, solid waste, CCSWA, Contra Costa, Walnut Creek, Seattle, Tacoma, Vancouver, Toronto, Montreal, Edmonton, Alberta, Quebec, Miami, Charlotte, New Jersey, Washington DC, EPA, VA, Department of Energy, Department of Defense, Government recycling, GreenBuild, department of forestry, veterans affairs, army corps of engineers, military waste, government waste, retail waste, airport waste, garbage system, garbage bag, trash can, composting, how to compost, twitter, facebook, google, apple, yahoo, recycling manual, recycling system, my trash, mywastetracker, wastetracker, track my waste, garbage truck, pc scale house, scale, manufacturing waste, garbage bin, wall street waste, wall street, Bloomberg, cnn, recycling news" />
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="<%= asset_path '_lib/css/vendor/bootstrap-v3.3.1-revised.css' %>" />
+    <link rel="stylesheet" type="text/css" href="<%= asset_path '_lib/css/vendor/jquery.fullpage.css' %>" />
+    <link rel="stylesheet" type="text/css" href="<%= asset_path '_lib/css/vendor/font-awesome.css' %>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<%= asset_path '_lib/css/styles.css' %>" />
+    
+    
+    
+<script type="text/javascript">
+ function login(){ 
+  //alert("Click");
+  
+  var username=document.getElementById('user').value;
+  var password=document.getElementById('pass').value;
+  
+    if ( username == "user@wastetracking.com" && password == "12345" ){
+ 	//alert ("Login successfully");
+   window.location = "admin/admin-statistics.html"; // Redirecting to other page.
+   return false;
+   }
+  
+   
+ else
+   {
+   alert("Please enter Valid User ID and Password");
+   }
+  
+ }
+</script>
+    
+</head>
+
+<body>
+
+
+
+
+	<a href="/admins/form"><img src="<%= asset_path 'img/free-icon.png' %>" style="position:absolute; bottom:20%; right:0.8%; cursor:pointer; z-index:100" /></a>
+
+
+
+
+	<div id="loader" style="background: none; margin: 10% auto 0px auto; padding: 0; position: absolute; left: 0; right: 0; width: 60px; height: 60px; z-index: 9999999"><img src="<%= asset_path '_images/global/loader.gif' %>"></div>
+    <div id="cover" style="background: #fff; margin: 0; overflow:hidden; padding: 0px 0px 1000% 0px; position: absolute; width: 100%; height: 100%; z-index: 99999"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- header start -->
+    <div id="header">
+    	<div class="header-bg"></div>
+    	<div class="container main">
+        	<div class="row">
+            	<div class="col-sm-3 logo">
+                	<a class="linktomain" href="#home"><img src="<%= asset_path '_images/global/logo.png' %>"></a>
+                </div>
+                <div class="col-sm-6">
+                	<ul>
+                    	<li class="nav-home"><a href="#home">home</a></li>
+                        <li><a href="#ourproducts"><span>our</span> products</a></li>
+                        <li><a href="#whatwedo"><span>what</span> we do</a></li>
+                        <li><a href="#whoweare/contact"><span>who</span> we are</a></li>
+                        <li><a class="orange" href="#scheduleademo">schedule a demo</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                	<div class="chat">
+                    	<span><a href="#">talk trash live</a> or 888 525 1301</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                	<div id="nav-selected-states">
+                    	<span class="selected-ourproducts">&nbsp;</span>
+                        <span class="selected-whatwedo">&nbsp;</span>
+                        <span class="selected-whoweare">&nbsp;</span>
+                        <span class="selected-demo">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <!--<a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -36px; right: 5%;"></div></a>-->
+        <a id="nav-small-button"><div class="fa fa-bars" style="cursor: pointer; float: right; color: #fff; font-size: 26px; position: relative; top: -38px; right: 5%;"></div></a>
+        <div id="nav-small">
+        	<div class="nav-small-bg"></div>
+            <div class="container">
+            	<div class="row">
+                	<div class="col-sm-10" style="padding-left: 25px !important;">
+                    	<div class="nav-small-main">
+                            <p><a class="small-home" href="#home"><span>our</span>home</a></p>
+                            <p><a class="small-products" href="#ourproducts"><span>our</span> products</a></p>
+                            <p><a class="small-whatwedo" href="#whatwedo"><span>what</span> we do</a></p>
+                            <p><a class="small-whoweare" href="#whoweare"><span>who</span> we are</a></p>
+                            <p><a class="small-demo" class="orange" href="#scheduleademo">schedule a demo</a></p>
+                            <p style="color: #ececec;"><a class="small-chat" href="#"><span>talk trash live</span></a> or 888 525 1301</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+    </div>
+    <!-- header end -->
+    
+    <!-- footer start -->
+    <div id="footer">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-9"></div>
+                <div class="col-md-3">
+                	<div class="demo-button">
+                    	<a href="#scheduleademo">
+                        	<span class="left">schedule a demo</span>
+                            <span class="right"><span class="fa fa-chevron-down" style="position: relative; top: -1px;"></span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    
+    <div id="video">
+    	<div class="video-container"></div>
+    	<div class="video">
+        	<iframe src="http://www.youtube.com/embed/videoseries?list=LLI5uZUsQye5I77tWMoo7qtw" width="100%" height="90%" frameborder="0"></iframe>
+            <a class="button-video-close"><span class="video-close">&times;</span></a>
+        </div>
+    </div>
+    
+    <!-- social media -->
+    <div id="social-media-container">
+    	<div class="icon">
+        	<img class="solution-social-facebook" src="<%= asset_path '_images/global/icon-facebook-24.png' %>" />
+            <span class="facebook-tip">
+            	<a href="https://www.facebook.com/greenhalosystems" target="_blank"><img src="<%= asset_path '_images/global/icon-facebook-like.png' %>" /></a><a onclick="return fbs_click()"><img src="<%= asset_path '_images/global/icon-facebook-share.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-linkedin" src="<%= asset_path '_images/global/icon-linkedin-24.png' %>" />
+            <span class="linkedin-tip">
+            	<a href="https://www.linkedin.com/company/green-halo-systems" target="_blank"><img src="<%= asset_path '_images/global/icon-linkedin-connect.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-wordpress" src="<%= asset_path '_images/global/icon-wordpress-24.png' %>" />
+            <span class="wordpress-tip">
+            	<a href="https://mygreenhalo.wordpress.com" target="_blank"><img src="<%= asset_path '_images/global/icon-wordpress-read.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img class="solution-social-twitter" src="<%= asset_path '_images/global/icon-twitter-24.png' %>" />
+            <span class="twitter-tip">
+            	<a href="https://twitter.com/greenhalousa" target="_blank"><img src="<%= asset_path '_images/global/icon-twitter-follow.png' %>" /></a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fwww.greenhalosytems.com" target="_blank"><img src="<%= asset_path '_images/global/icon-twitter-share.png' %>" /></a>
+            </span>
+        </div>
+        <div class="icon" style="margin-top: -4px;">
+        	<img src="<%= asset_path '_images/global/icon-empty-24.png' %>" />
+            <span>
+            	<img src="<%= asset_path '_images/global/icon-empty-24.png' %>" />
+            </span>
+        </div>
+    </div>
+    <!-- social media end -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="fullpage">
+    	
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- main start -->
+        <div class="section " id="section0">
+        	<div id="slideshow">
+            	<img src="<%= asset_path '_images/main/bg-grass.jpg' %>" class="cycle"/>
+                <img src="<%= asset_path '_images/main/bg-mountain.jpg' %>" class="cycle"/>
+                <img src="<%= asset_path '_images/main/bg-lake.jpg' %>" class="cycle"/>
+            </div>
+            <div class="intro" style="position: relative; z-index: 1;">
+                <div id="main-ticker">
+                    <ul id="ticker01">
+                        <li>Appliances &amp; Equipments 331 Tons</li>
+                        <li>Asphalt 28 Tons</li>
+                        <li>Bottles &amp; Cans 2,652 Tons</li>
+                        <li>Bricks, Masonry, &amp Stone Products 12 Tons</li>
+                        <li>Cardboard Paper 48 Tons</li>
+                        <li>Carpet Padding &amp; Foam 6 Tons</li>
+                        <li>Ceiling Tiles 11 Tons</li>
+                        <li>Concrete 52 Tons</li>
+                        <li>Dirt 770 Tons</li>
+                        <li>Drums, Barrels, &amp; Buckets 10 Tons</li>
+                        <li>Dunnage 5 Tons</li>
+                        <li>E-constructed &amp; Salvaged Items 26 Tons</li>
+                        <li>E-waste 68 Tons</li>
+                        <li>Glass Plate or Tampered 18 Tons</li>
+                        <li>Green Landscape 232 Tons</li>
+                        <li>Gypsum 9 Tons</li>
+                        <li>Hazardous &amp; Waste Materials 4,524 Tons</li>
+                        <li>Metal 991 Tons</li>
+                        <li>Roofing Asphalt 602 Tons</li>
+                        <li>Plastics 33 Tons</li>
+                        <li>Septic Waste 76 Tons</li>
+                        <li>Trash 818 Tons</li>
+                        <li>Wood 42 Tons</li>
+                    </ul>
+                </div>
+                <div id="main-ticker-cover" style="position: relative; z-index: 12;"><img src="<%= asset_path '_images/main/ticker.png' %>"></div>
+                <div class="container" style="width: 100%; height: 78px;">&nbsp;</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div id="main-content">
+                                <div class="call-to-action cta-for-wide-screens" style="margin-top: -3px; margin-bottom: 25px;">
+                                    <a class="video-show" href="#">
+                                        <span class="left"><span class="fa fa-play-circle-o" style="font-size: 54px; position: relative; top: 24px; text-shadow: 0px 0px 41px rgba(255, 255, 255, 1);"></span></span>
+                                        <span class="right"><span style="text-shadow: 0px 5px 41px rgba(0, 0, 0, 1);">WATCH THIS VIDEO TO LEARN MORE ABOUT GREEN HALO</span></span>
+                                    </a>
+                                </div>
+                                <div class="call-to-action cta-for-small-screens" style="display: block; margin-top: -9px; margin-bottom: 19px; text-align: center;">
+                                    <a class="video-show" href="#">
+                                        <span class="fa fa-play-circle-o" style="font-size: 54px; margin-bottom: 10px; text-shadow: 0px 0px 41px rgba(255, 255, 255, 1);"></span><br/>
+                                        <span style="font: normal 18px MyriadProBold; letter-spacing: .20px; line-height: 22px; text-shadow: 0px 5px 41px rgba(0, 0, 0, 1);">WATCH THIS VIDEO TO LEARN MORE<br/>ABOUT GREEN HALO</span></span>
+                                    </a>
+                                </div>
+                                <div class="title">Recycling today's resources for tomorrow's generations!</div>
+                                <div class="title" style="margin-top: 21px;"><a href="#scheduleademo" class="button-schedule">Schedule a Demo</a></div>
+                                <div class="call-to-action cta-for-wide-screens" style="margin-top: -8px;">
+                                    <a href="#ourproducts">
+                                        <span class="left"><span class="fa fa-angle-down" style="color: #99cc33; font-size: 74px; position: relative; top: 29px;"></span></span>
+                                        <span class="right"><span style="text-shadow: 0px 0px 21px rgba(0, 0, 0, .50);">FIND A TRACKING SOLUTION FOR YOUR BUSINESS</span></span>
+                                    </a>
+                                </div>
+                                <div class="call-to-action cta-for-small-screens" style="display: block; margin-top: 16px; margin-bottom: 34px; text-align: center;">
+                                    <a href="#">
+                                        <span class="fa fa-angle-down" style="color: #99cc33; font-size: 74px;"></span><br/>
+                                        <span style="font: normal 18px MyriadProBold; letter-spacing: .20px; line-height: 22px; position: relative; top: -9px; text-shadow: 0px 0px 21px rgba(0, 0, 0, .50);">FIND A TRACKING SOLUTION<br/>FOR YOUR BUSINESS</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div id="main-form">
+                                
+                                    <p class="title">New Users</p>
+                                    <a href="/admins/form"class="button-start-plan wide">Start your waste management plan here today!&nbsp;&nbsp;<span class="fa fa-caret-right"></span></a>
+                                    <!-- show this on 320px screens -->
+                                    <p class="button-start-plan small">Start Here&nbsp;&nbsp;<span class="fa fa-caret-right"></span></p>
+                                    <!-- show this on 320px screens -->
+                                    <p class="title">Existing Users</p>
+
+<!-- <input id="user" class="" name="" placeholder="email address *" type="text" style="margin-top: 5px;" />
+                                    <input id="pass" class="" name="" placeholder="password *" type="password" style="margin-top: 10px;" />
+                                    <input id="" class="button-signin" onClick="login();" name="" type="button" value="Sign In Now" style="margin-top: 10px;" />-->
+
+					<%= form_tag("/admins/dashboard", method: "post") do %>
+
+					<%= text_field_tag "user",nil, :class=>"",:placeholder=>"email address *",:style=>"margin-top: 5px;" %>
+
+					<%= password_field_tag "pass",nil, :class=>"",:placeholder=>"password *",:style=>"margin-top: 10px;" %>
+                                    
+					<%= submit_tag "Sign In Now",class:'button-signin' %>
+					<% end %>
+                                    <div class="links-for-wide-screens" style="margin-top: 6px; text-align: center;">
+                                        <a class="form-link" href="form-forgot-password.html" style="padding-right: 12px;">Forgot your password?</a><input id="checkbox-password" class="" name="" type="checkbox" /><label for="checkbox-password"></label><span class="form-link" for="checkbox-password" style="padding-left: 6px;">Save my password</span>
+                                    </div>
+                                    <!-- show this div on smaller screens -->
+                                    <div class="links-for-small-screens" style="margin-top: 6px; text-align: center;">
+                                        <a class="form-link" href="form-forgot-password.html">Forgot your password?</a><br/><input id="checkbox-password" class="" name="" type="checkbox" /><label for="checkbox-password"></label><span class="form-link" for="checkbox-password" style="padding-left: 6px;">Save my password</span>
+                                    </div>
+                                    <!-- show this div on smaller screens -->
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 50px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="main-stats-box">&nbsp;</div>
+                            <div id="main-stats">
+                                <p class="icon fa fa-bar-chart-o" style="font-size: 43px; text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"></p>
+                                <p class="stat points" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"><span class="timer1" id="counter1">1</span></p>
+                                <p class="title" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);">TOTAL TONS TRACKED</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="main-stats-box">&nbsp;</div>
+                            <div id="main-stats">
+                                <p class="icon fa fa-recycle" style="font-size: 43px; position: relative; top: 1px; text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"></p>
+                                <p class="stat" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"><span class="timer2" id="counter2">1</span></p>
+                                <p class="title" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);">TOTAL TONS RECYCLED</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="main-stats-box">&nbsp;</div>
+                            <div id="main-stats">
+                                <p class="icon fa fa-tree" style="font-size: 43px; text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"></p>
+                                <p class="stat" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);"><span class="timer3" id="counter3">1</span></p>
+                                <p class="title" style="text-shadow: 0px 0px 67px rgba(0, 0, 0, .80);">TOTAL CARBON SAVINGS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 209px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main end -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- our products start -->
+        <div class="section" id="section1">
+        	<div class="slide" id="ourproducts-construction" data-anchor="construction">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div class="border-rounded-top" id="ourproducts-title">Green Halo is the leader in waste tracking solutions for Construction</div>
+                        </div>
+                    </div>
+                    <div class="row border-rounded-bottom" id="ourproducts-content">
+                    	<div class="col-sm-12">
+                        	<div class="content">
+                            	<p>
+                                	If your construction project is LEED rated, green point rated, falls under regulatory green requirements, or you simply want to create an effective waste diversion plan, then Green Halo is the tool for you. Green Halo can create a detailed waste management plan that you can share with project managers, sub contractors, and clients with just one click, making sure everyone on your project has a clear outline of your diversion goals.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Plan</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-waste.png' %>"></p>
+                                                <p class="feature">Create waste management plans that maximize diversion</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Monitor</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-trash.png' %>"></p>
+                                                <p class="feature">Monitor subcontractor waste activity and compliance</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Organize</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-recycle.png' %>"></p>
+                                                <p class="feature">All your waste and recycling information in one place</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Report</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-basket.png' %>"></p>
+                                                <p class="feature">Generate comprehensive reports and real-time statistics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <div id="ourproducts-menu" style="padding-top: 24px;">
+                                        <a href="#scheduleademo" class="demo" style="background: #ff9900;">schedule a demo</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 209px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="ourproducts-buildingownersmanagers" data-anchor="buildingownersmanagers">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div class="border-rounded-top" id="ourproducts-title">Green Halo is the leader in waste tracking solutions for Property Owners and Facility Managers</div>
+                        </div>
+                    </div>
+                    <div class="row border-rounded-bottom" id="ourproducts-content">
+                    	<div class="col-sm-12">
+                        	<div class="content">
+                            	<p>
+                                	Owning and managing a property in today’s “green” corporate environment requires your building to comply with LEED and other zero waste policies. With Green Halo, you can view construction recycling information on specific projects, contractors, buildings, or entire portfolios, all with a simple click. Implementing Green Halo is easy and our cloud-based system allow for anywhere, anytime access in the field or in the office.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Organize</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-cabinet.png' %>"></p>
+                                                <p class="feature">Waste and recycling information organized in one central place</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Monitor</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-search.png' %>"></p>
+                                                <p class="feature">Monitor waste hauler activity for compliance and with LEED</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Monetize</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-dollar.png' %>"></p>
+                                                <p class="feature">Identify and capture waste streams that generate revenue</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Report</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-piechart.png' %>"></p>
+                                                <p class="feature">Generate comprehensive reports with real time statistics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <div id="ourproducts-menu" style="padding-top: 24px;">
+                                        <a href="#scheduleademo" class="demo">schedule a demo</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 209px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="ourproducts-governmentagencies" data-anchor="governmentagencies">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div class="border-rounded-top" id="ourproducts-title">Green Halo is the leader in waste tracking solutiuons for Government Agencies</div>
+                        </div>
+                    </div>
+                    <div class="row border-rounded-bottom" id="ourproducts-content">
+                    	<div class="col-sm-12">
+                        	<div class="content">
+                            	<p>
+                                	If you are a government official responsible for managing and implementing a waste recycling mandate, then Green Halo is for you. With Green Halo, you can easily implement and manage
+construction recycling policy, customize recycling programs for project or building types, and generate comprehensive recycling reports and statistics to make your program a success.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Implement</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-plug.png' %>"></p>
+                                                <p class="feature">Implement waste and recycling policies and programs</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Enforce</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-shield.png' %>"></p>
+                                                <p class="feature">Receive non-compliance alerts and notifications</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Monitor</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-recycle.png' %>"></p>
+                                                <p class="feature">Monitor waste flows and recycling activity from all business sectors</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Report</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-document.png' %>"></p>
+                                                <p class="feature">Generate comprehensive reports with real time statistics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <div id="ourproducts-menu" style="padding-top: 24px;">
+                                        <a href="#scheduleademo" class="demo">schedule a demo</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 209px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="ourproducts-haulersrecyclingfacilities" data-anchor="haulersrecyclingfacilities">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div class="border-rounded-top" id="ourproducts-title">Green Halo is the leader in Waste Tracking solutions for Haulers and Recycling Facilities</div>
+                        </div>
+                    </div>
+                    <div class="row border-rounded-bottom" id="ourproducts-content">
+                    	<div class="col-sm-12">
+                        	<div class="content">
+                            	<p>
+                                	Recycling is a competitive business. Clients are demanding detailed recycling reports for their projects and municipalities are demanding detailed diversion reports on your facility. Green Halo provides you with easy to use tracking tools to generate detailed waste diversion reports for your construction clients and their end user. The comprehensive reports and statistics can offer clients an insider view of your clients reycling needs and the competetive edge need to atract and retain high level customers.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Organize</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-cabinet.png' %>"></p>
+                                                <p class="feature">Waste and recycling information organized in one central place</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Monitor</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-search.png' %>"></p>
+                                                <p class="feature">Monitor waste hauler activity for compliance with LEED</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Comply</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-document.png' %>"></p>
+                                                <p class="feature">Easily comply with laws, regulations, policies, and requirements</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="feature-container">
+                                                <p class="header">Report</p>
+                                                <p class="icon"><img src="<%= asset_path '_images/ourproducts/icon-piechart.png' %>"></p>
+                                                <p class="feature">Generate comprehensive reports with real time statistics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <div id="ourproducts-menu" style="padding-top: 24px;">
+                                        <a href="#scheduleademo" class="demo">schedule a demo</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin: 0; padding: 0; width: 100%; height: 209px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin: 0; padding: 0px 0px 22px 0px !important; position: absolute; top: 0; left: 0; right: 0;">
+            	<div class="row">
+                	<!--<div style="width: 100%; height: 160px;">&nbsp;</div>-->
+                    <div style="width: 100%; height: 130px;">&nbsp;</div>
+                </div>
+                <div class="row">
+                	<div class="col-sm-12">
+                    	<div id="ourproducts-menu" class="menu-for-wide-screens">
+                        	<a class="spacer selected construction" href="#ourproducts/construction">construction</a><a class="spacer default buildings" href="#ourproducts/buildingownersmanagers">building owners &amp; managers</a><a class="spacer default government" href="#ourproducts/governmentagencies">government agencies</a><a class="default facilities" href="#ourproducts/haulersrecyclingfacilities">haulers &amp; recycling facilities</a>
+                        </div>
+                        <!-- show this div on smaller screens -->
+                        <div id="ourproducts-menu" class="menu-for-small-screens">
+                        	<a class="spacer selected construction" href="#ourproducts/construction">1</a><a class="spacer default buildings" href="#ourproducts/buildingownersmanagers">2</a><a class="spacer default government" href="#ourproducts/governmentagencies">3</a><a class="default facilities" href="#ourproducts/haulersrecyclingfacilities">4</a>
+                        </div>
+                        <!-- show this div on smaller screens -->
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-sm-1">
+                    	<div id="ourproducts-menu">
+                        	<a class="arrow-left" style="background: none; margin-top: 190px; margin-left: -94px; cursor: pointer;"><img src="<%= asset_path '_images/global/arrow-left.png' %>" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10"></div>
+                    <div class="col-sm-1">
+                    	<div id="ourproducts-menu">
+                        	<a class="arrow-right" style="background: none; margin-top: 190px; margin-right: -94px; cursor: pointer;"><img src="<%= asset_path '_images/global/arrow-right.png' %>" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- our products end -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- what we do start -->
+        <div class="section" id="section2">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-sm-12">
+                    	<div id="whatwedo-title">We provide accurate statistics for tracking waste and recycling!</div>
+                    </div>
+                </div>
+            </div>
+            <div id="whatwedo-container">
+            	<a href="#scheduleademo"><img class="laptop" src="<%= asset_path '_images/whatwedo/laptop.jpg' %>" style="position: relative; left: 0; right: 0; width: 100%;" /></a>
+            </div>
+            <!--<div class="container" style="width: 100%; height: 150px;">&nbsp;</div>-->
+        </div>
+        <!-- what we do end -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- what we do start -->
+        <div class="section" id="section3">
+        	<div id="whoweare-main-container">
+            	<div id="whoweare-main">
+                	<div class="container">
+                    	<div class="row">
+                        	<div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                            	<p class="header">Green Halo makes tracking waste and recycling clear and easy!</p>
+                                <p class="content">We create easy to use online platforms for tracking waste and recycling that help identify and account for waste streams, maximize diversion, and expose
+your company’s waste to secondary market opportunities, while providing real time environmental consciousness.</p>
+                                <p class="icons"><img src="<%= asset_path '_images/whoweare/icons.png' %>"></p>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="whoweare-contact">
+            	<div class="row">
+                	<div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                    	<p class="header">Contact Us</p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" id="whoweare-contact">
+                	<div class="col-md-1"></div>
+                    <div class="col-md-3">
+                    	<p class="title">Headquarters Office</p>
+                        <p class="content stacked">
+                        	521 Charcot Avenue, Suite 119<br/>
+                            San Jose, California 95131<br/>
+                            Phone<span>888 525 1301</span><br/>
+                            Fax<span>408 713 6070</span><br/>
+                            Email<a href="mailto:hello@greenhalo.com">hello@greenhalo.com</a><br/><br/><br/>
+                        </p>
+                        <p class="content non-stacked">
+                        	521 Charcot Avenue, Suite 119, San Jose, California 95131<br/>
+                            Phone<span>888 525 1301</span><span></span><span></span>Fax<span>408 713 6070</span><br/>
+                            Email<a href="mailto:hello@greenhalo.com">hello@greenhalo.com</a><br/><br/><br/>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                    	<p class="title" style="padding-left: 70px;">SoCal Branch Office</p>
+                        <p class="content stacked" style="padding-left: 70px;">
+                        	3030 South Shannon Street<br/>
+                            Santa Ana, California 92704<br/>
+                            Phone<span>888 525 1301</span><br/>
+                            Email<a href="mailto:socal@greenhalo.com">socal@greenhalo.com</a>
+                        </p>
+                        <p class="content non-stacked">
+                        	3030 South Shannon Street, Santa Ana, California 92704<br/>
+                            Phone<span>888 525 1301</span><br/>
+                            Email<a href="mailto:socal@greenhalo.com">socal@greenhalo.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                    	<p class="chat-title">Free Live Support</p>
+                        <p class="chat-content">
+                        	Friendly helpful and ready to answer your questions.<br/><br/>
+                            <a class="button-chat" href="#">Live Chat</a>
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+            <div id="whoweare-map"></div>
+        </div>
+        <!-- what we do end -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- schedule a demo start -->
+        <div class="section" id="section4">
+        	<div id="demo-container">
+            	<div id="demo">
+                	<div class="container">
+                    	<div class="row" id="demo-content">
+                        	<div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                            	<div class="content">
+                                	<p class="header">Web Demo Request Form</p>
+                                    <p>Schedule a Web Demo to find out more about all the features, functions, and reporting capabilities of Green Halo has to offer.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                    	<div class="row">
+                        	<div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                            	<div id="demo-form">
+                                	
+                                    <!--<form action="form-demo.php" id="form-demo" method="POST" name="form-demo">
+                                    	<input id="" class="field-name" name="form-name" placeholder="full name *" type="text" style="margin-top: 10px;" />
+                                        <span class="select" style="margin-top: 10px;">
+                                        	<select name="form-tracking">
+                                            	<option vakue="">what are you tracking?</option>
+                                                <option vakue="Building onwners & Managers">building owners &amp; managers</option>
+                                                <option vakue="Construction">construction</option>
+                                                <option vakue="Municipalities">municipalities</option>
+                                                <option vakue="Retailers">retailers</option>
+                                                <option vakue="School">school</option>
+                                                <option vakue="Waste Data Managment">waste data management</option>
+                                                <option vakue="">custom tracking applications</option>
+                                            </select>
+                                        </span>
+                                        <span class="select" style="margin-top: 10px;">
+                                        	<select name="form-numberofprojects">
+                                            	<option vakue=""># of projects you want to track?</option>
+                                                <option vakue="1">1</option>
+                                                <option vakue="2-5">2-5</option>
+                                                <option vakue="5">5+</option>
+                                            </select>
+                                        </span>
+                                        <input id="" class="field-email" name="form-email" placeholder="email address *" type="text" style="margin-top: 10px;" />
+                                        <input id="" class="field-phone" name="form-phone" placeholder="phone ( ___-___-____) *" type="text" style="margin-top: 10px;" />
+                                        <input id="" class="field-date" name="form-date" placeholder="request date ( __/__/____ ) *" type="text" style="margin-top: 10px;" />
+                                        <input id="" class="field-call" name="form-call" placeholder="time to call ( __:__ ) *" type="text" style="float: left; margin: 10px 2% 0px 0px; width: 76%;" />
+                                        <span class="select" style="float: left; margin-top: 10px; width: 22% !important;">
+                                        	<select name="form-ampm" style="background-position: 66% 50%; width: 120%;">
+                                            	<option vakue="am">AM</option>
+                                                <option vakue="pm">PM</option>
+                                            </select>
+                                        </span>
+                                        <span class="select" style="float: left; margin-top: 10px;">
+                                        	<select name="form-zone">
+                                            	<option vakue="">select time zone *</option>
+                                                <option vakue="Pacific Time">pacific time</option>
+                                                <option vakue="Mountain Time">mountain time</option>
+                                                <option vakue="Central Time">central time</option>
+                                                <option vakue="Eastern Time">eastern time</option>
+                                            </select>
+                                        </span>
+                                        <input id="" class="button-demo-submit" name="" type="submit" value="Submit Request" style="margin-top: 10px;" />
+                                    </form>-->
+                                </div>
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-container">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div id="footer-logo">
+                            	<img src="<%= asset_path '_images/global/logo-footer.png' %>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="footer-links">
+                    	<div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                        	<div class="links">
+                                <p><span class="header">Company</span></p>
+                                <p><a href="#ourproducts"><span class="green">green halo</span> products</a></p>
+                                <p><a href="#whatwedo"><span class="green">green halo</span> services</a></p>
+                                <p><a href="#whoweare">about <span class="green">green halo</span></a></p>
+                                <p><a href="#whoweare">contact <span class="green">green halo</span></a></p>
+                                <p>&nbsp;</p>
+                                <p><a class="orange" href="#scheduleademo">schedule a demo</a></p>
+                                <p>&nbsp;</p>
+                                <p><a href="https://mygreenhalo.wordpress.com" target="_blank"><span class="green">green halo</span> news</a></p>
+                                <p><a href="https://twitter.com/greenhalousa" target="_blank"><span class="green">green halo</span> tweets</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        	<div class="links">
+                                <p><span class="header">Quick Links</span></p>
+                                <p><a href="http://www.calgreenreporting.com" target="_blank">calgreen reporting</a></p>
+                                <p><a href="#">consturction recycling</a></p>
+                                <p><a href="#">diversion report</a></p>
+                                <p><a href="#">LEED reporting</a></p>
+                                <p><a href="http://www.sourceseparating.com" target="_blank">source separating</a></p>
+                                <p><a href="#">track recycling</a></p>
+                                <p><a href="http://wasteflows.com" target="_blank">waste flows</a></p>
+                                <p><a href="http://www.wastemanagementplan.com" target="_blank">waste management</a></p>
+                                <p><a href="http://www.wastetracking.com" target="_blank">waste tracking</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        	<div class="links">
+                                <p><span class="header">Social Media</span></p>
+                                <p><a href="https://www.facebook.com/greenhalosystems" target="_blank"><span class="green">green halo</span> on facebook</a></p>
+                                <p><a href="https://www.linkedin.com/company/green-halo-systems" target="_blank"><span class="green">green halo</span> on linkedin</a></p>
+                                <p><a href="https://twitter.com/greenhalousa" target="_blank"><span class="green">green halo</span> on twitter</a></p>
+                                <p><a href="https://mygreenhalo.wordpress.com" target="_blank"><span class="green">green halo</span> on wordpress</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        	<div class="links">
+                                <p><span class="header">Partners</span></p>
+                                <p><a href="http://www.boma.org" target="_blank">boma international</a></p>
+                                <p><a href="http://www.cdrecycling.org" target="_blank">CMRA</a></p>
+                                <p><a href="http://greenglobe.com" target="_blank">green globe</a></p>
+                                <p><a href="http://www.stopwaste.org" target="_blank">stopwaste.org</a></p>
+                                <p><a href="http://www.usgbc.org" target="_blank">USGBC</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        	<p style="color: #ccc; line-height: 20px;">Recycling today’s resources for tomorrow’s generations.</p>
+                            <p class="support" style="color: #6c6c6c; line-height: 20px;">For customer and technical support, please call us at 888 525 1301, M - F 8AM - 5PM PST</p>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="row" id="footer-links">
+                    	<div class="col-sm-6">
+                        	<p class="copyright-left">
+                            	&copy; Copyright 2015 Green Halo Systems Inc.<span></span>All rights reserved.<br>
+                                521 Charcot Avenue, San Jose, CA 95131<span></span>888 525 1301<span></span><a href="mailto:hello@greenhalo.com">hello@greenhalo.com</a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                        	<p class="copyright-right">
+                            <a href="terms.html">Terms &amp; Conditions</a><span></span><a href="policies.html">Policies</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- schedule a demo end -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--<script type="text/javascript" src="_lib/js/vendor/jquery.1.11.0.min.js"></script>
+    <script type="text/javascript" src="_lib/js/vendor/jquery-ui.1.11.0.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.slimscroll.min.js' %>"></script>
+	<script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.fullpage.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/vendor/jquery.cycle.lite.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count2.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/jquery.count3.js' %>"></script>
+    <script type="text/javascript" src="<%= asset_path '_lib/js/location.js' %>"></script>
+	<script type="text/javascript" src="<%= asset_path '_lib/js/scripts.js' %>"></script>
+    
+    <script>
+		$(document).ready(function()
+		{
+			jQuery(function ($)
+			{
+				$('#counter1').data('countToOptions1',
+				{
+					formatter: function (value, options) { return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ','); }
+				});
+				
+				$('.timer1').each(count);
+				function count(options)
+				{
+					var $this = $(this);
+					options = $.extend({}, options || {}, $this.data('countToOptions1') || {});
+					$this.countTo1(options);
+				}
+			});
+			
+			jQuery(function ($)
+			{
+				$('#counter2').data('countToOptions2',
+				{
+					formatter: function (value, options) { return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ','); }
+				});
+				
+				$('.timer2').each(count);
+				function count(options)
+				{
+					var $this = $(this);
+					options = $.extend({}, options || {}, $this.data('countToOptions2') || {});
+					$this.countTo2(options);
+				}
+			});
+			
+			jQuery(function ($)
+			{
+				$('#counter3').data('countToOptions3',
+				{
+					formatter: function (value, options) { return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ','); }
+				});
+				
+				$('.timer3').each(count);
+				function count(options)
+				{
+					var $this = $(this);
+					options = $.extend({}, options || {}, $this.data('countToOptions3') || {});
+					$this.countTo3(options);
+				}
+			});
+		});
+	</script>
+
+
+</body>
+
+</html>
