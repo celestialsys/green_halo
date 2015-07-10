@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
 	#before_filter :authenticate_user!
-
+  #before_action :authenticate_temporary_user!
  # def resource_name
  #    :temporary_user
  #  end
@@ -41,6 +41,11 @@ end
 
 def id
 # ascac 
+end
+
+
+def account_confirmed
+	
 end
 
 def form

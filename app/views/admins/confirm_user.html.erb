@@ -129,9 +129,13 @@
                         <div class="row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-8">
-                                 <%=@temporary_user.inspect %>
-                                <p class="header">Complete Registration</p>
+                                 <%#=@temporary_user.inspect %>
+                                <p class="header">Complete Registration
+
+                                </p>
                                 <p>Please confirm all the following information below are correct. Click back to make changes, otherwise click Confirm to submit your information.</p>
+                                
+                                <p><%#= link_to "Back" ,edit_temporary_user_registration_path(:id => @temporary_user),:style => "color:black;"%></p>
                             </div>
                             <div class="col-sm-2"></div>
                         </div>
@@ -139,28 +143,48 @@
                             <div class="col-sm-4"></div>
                             <div class="col-sm-4">
                                 <div id="account-form">
-                                    <p class="label">Log In Profile</p>
-                                    <p class="input" style="margin-top: 4px;">user name:&nbsp;&nbsp;<%= params[:email]%></p>
+                                    <%= form_tag(root_path,:method => "get") do -%>
+                                        <p class="label">Log In Profile</p>
+                                        <p class="input" style="margin-top: 4px;">Email:&nbsp;&nbsp;<%=@temporary_user.email %></p>
 
-                                    <!-- <p class="input">password:<span>view</span></p>
-                                    <p class="label" style="margin-top: 21px;">&nbsp;</p> -->
-                                    <br/>
-                                    <p class="label">User Profile</p>
-                                    <p class="input">first name: &nbsp;&nbsp; <%= @temporary_user.first_name %> </p>
-                                    <p class="input">last name:  &nbsp;&nbsp; <%= @temporary_user.last_name %></p>
-                                    <p class="input">position: &nbsp;&nbsp; <%= params[:position]%> </p>
-                                    <p class="input">company name: &nbsp;&nbsp; <%= @temporary_user.company_name %></p>
-                                    <p class="input">company website: &nbsp;&nbsp; <%= @temporary_user.website %></p>
-                                    <p class="input">address 1: &nbsp;&nbsp; <%= @temporary_user.address1 %></p>
-                                    <p class="input">address 2: &nbsp;&nbsp; <%= @temporary_user.address2 %> </p>
-                                    <p class="input">zip code:  &nbsp;&nbsp; <%= @temporary_user.zipcode %></p>
-                                    <p class="input">phone:  &nbsp;&nbsp; <%= params[:phone] %></p>
+                                        <p class="input" style="margin-top: 4px;">Confirm Email:&nbsp;&nbsp;<%=@temporary_user.confirm_email %></p>
 
                                     <p class="input">how you heard about us: &nbsp;&nbsp; <%= @temporary_user.to_know %></p>
                                    
                                    <%= link_to  "Confirm Information" ,root_path ,:class => "button-account-submit",:style => "margin-top: 50px;color:black;"%>
 
-                                   <!--  <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" /> -->
+
+                                        <!-- <p class="input">password:<span>view</span></p>
+                                        <p class="label" style="margin-top: 21px;">&nbsp;</p> -->
+                                        <br/>
+                                        <p class="label">User Profile</p>
+                                        <p class="input">first name: &nbsp;&nbsp; <%= @temporary_user.first_name %> </p>
+                                        <p class="input">last name:  &nbsp;&nbsp; <%= @temporary_user.last_name %></p>
+                                        <p class="input">position: &nbsp;&nbsp; <%= @temporary_user.position %> </p>
+                                        <p class="input">company name: &nbsp;&nbsp; <%= @temporary_user.company_name %></p>
+                                        <p class="input">company website: &nbsp;&nbsp; <%= @temporary_user.website %></p>
+                                        <p class="input">address 1: &nbsp;&nbsp; <%= @temporary_user.address1 %></p>
+                                        <p class="input">address 2: &nbsp;&nbsp; <%= @temporary_user.address2 %> </p>
+                                        <p class="input">zip code:  &nbsp;&nbsp; <%= @temporary_user.zipcode %></p>
+                                        <p class="input">phone:  &nbsp;&nbsp; <%= @temporary_user.phone %></p>
+
+                                        <p class="input">how you heard about us: &nbsp;&nbsp; <%= @temporary_user.to_know %></p>
+                                       
+                                   <%#= link_to  "Confirm Information" ,root_path  ,:class => "button-account-submit",:style => "margin-top: 50px;color : black;"%>
+
+                                   <%= submit_tag "Confirm Information",:class => "button-account-submit" ,:style => "margin-top: 50px;"%>
+
+
+
+                                  <!--  <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" /> -->
+
+                                    <!-- <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" />  -->
+                                  <%end%>
+
+                                   <%#= link_to "Back",:class => "button-account-submit1" ,:style => "margin-top: 50px;"%>
+                                  <%#= link_to  "Edit profile"  ,:class => "button-account-submit",:style => "margin-top: 50px;color : red;"%>
+
+                                  <%#= link_to "Edit" ,:style => "color:black;"%>
                                 </div>
                             </div>
                             <div class="col-sm-4"></div>
@@ -329,3 +353,5 @@
 <!-- </body> -->
 
 <!-- </html> -->
+
+

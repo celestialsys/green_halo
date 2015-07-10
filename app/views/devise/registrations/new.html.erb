@@ -1,6 +1,6 @@
 
 
-
+  <%#= params.inspect %>
   
     <title>Waste Diversion and Recycling Tracking System - Green Halo - The Leader in Waste Tracking Solution</title>
     
@@ -87,10 +87,11 @@
     <div id="fullpage">
       <div class="section gradient" id="section0" style="background-image:url(<%= asset_path '_images/ourproducts/construction.jpg'%>) !important; background-repeat:no-repeat; background-position:top;">
           <div id="main-createaccount">
-                <div style = "align:center;"><%= devise_error_messages! %></div>
+                <div style = "align:center;"></div>
 
                   <div class="container box">
                       <div class="row">
+                <div style = "margin-left:345px;"><%= devise_error_messages! %></div>
                             <div class="col-sm-2"></div>
                             <div class="col-sm-8">
                                 <p class="header">Create Account</p>
@@ -332,11 +333,14 @@
 
                                     <%= f.email_field :email ,:class=>"account-email",:placeholder=>"email *",:style=>"  border: solid 1px #ccc;    margin-top: 10px;" %>
 
+                                    &nbsp;<span id="email_msg"></span>
+
+
                                     <%= f.text_field :confirm_email ,:class=>"account-confirm-  email",:placeholder=>"confirm email *",:style=>"  border: solid 1px #ccc;    margin-top: 10px;" %>
                     
                             
                                         <% if @validatable %>
-                                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                                    <em>(<%#= @minimum_password_length %>Password Must be combination of numeric and case sensitive )</em>
                                     <% end %><br />
                                     <%=f.password_field :password  ,:class=>"account-password",:placeholder=>"password *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
                                     
@@ -346,41 +350,51 @@
 
                                     <p class="label" style="margin-top: 50px;">User Profile</p>
                                     
-                                    <%= f.text_field :first_name ,:class=>"account-firstname",:placeholder=>"firstname *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    <%= f.text_field :first_name ,:maxlength => 12,:class=>"account-firstname",:placeholder=>"firstname *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
 
-                                    <%= f.text_field :last_name ,:class=>"account-lastname",:placeholder=>"lastname *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    <%= f.text_field :last_name ,:maxlength => 18,:class=>"account-lastname",:placeholder=>"lastname *",:maxlength => 12,:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
 
-                                    <%= f.text_field :position ,:class=>"account-position",:placeholder=>"position *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    <%= f.text_field :position ,:maxlength => 12,:class=>"account-position",:placeholder=>"position *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
 
-                                   <%= f.text_field :company_name,:class=>"account-companyname",:placeholder=>"companyname *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                   <%= f.text_field :company_name,:maxlength => 12,:class=>"account-companyname",:placeholder=>"companyname *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
                                     
-                                    <%= f.text_field :website,:class=>"account-companywebsite",:placeholder=>"companywebsite *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    <%= f.text_field :website,:maxlength => 12,:class=>"account-companywebsite",:placeholder=>"companywebsite *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
 
                                    <%#= f.text_field :website,:class=>"account-companywebsite",:placeholder=>"companywebsite *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
-                                       <%= f.text_field :address1 ,:class=>"account-address1",:placeholder=>"address1 *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                       <%= f.text_field :address1 ,:maxlength => 120,:class=>"account-address1",:placeholder=>"address1 *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
-                                       <%= f.text_field :address2 ,:class=>"account-address2",:placeholder=>"address2 *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                       <%= f.text_field :address2 ,:maxlength => 12,:class=>"account-address2",:placeholder=>"address2 ",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
 
-                                    <%= f.text_field :zipcode ,:class=>"account-zipcode",:placeholder=>"zipcode *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    <%= f.text_field :zipcode ,:maxlength => 6,:class=>"account-zipcode",:placeholder=>"zipcode *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                    &nbsp;<span id="errmsg"></span>
 
-                                   <%= f.text_field :phone ,:class=>"account-phone",:placeholder=>"phone *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>
+                                   <%= f.text_field :phone ,:maxlength => 10,:placeholder=>"phone *",:style=>"border: solid 1px #ccc; margin-top: 10px;" %>&nbsp;<span id="errmsg1"></span>
 
-                                    <span class="select" style="border: solid 1px #ccc; margin-top: 10px;">
-                                       <%= f.select :to_know ,(TemporaryUser::DETAILS) ,:prompt => "how you heard about us? *"%>
-                                    </span>
+                                   <!--   <span class="select" style="border: solid 1px #ccc; margin-top: 10px;">  -->
+                                       <%#= f.select :to_know ,(TemporaryUser::DETAILS) %>
+                                       <%= f.text_field :to_know, list: 'to_know' ,:placeholder => "how you heard about us? *" ,:style => "border: solid 1px #ccc; margin-top: 10px;"%>
+                                        <datalist id="to_know">
+                                          <% (TemporaryUser::DETAILS).each do |person| %>
+                                            <option value="<%= person %>" ></option>
+                                          <%end%>
+                                        </datalist>
+
+                                     <!--  </span>  -->
 
                                     <%= f.hidden_field :type_of_plan ,:value => "Individual" %>
-                                
+                               
 
-                                 <p class="label">Upload Profile Pic</p>
-                                    <%= f.label :image%><br />
+                                 <p class="label" style = "margin-top:20px;">Upload Profile Pic</p>
+                                    <%= image_tag "img/profile-dp.png"  %>
+                                    <%#= f.label :image%><br />
                                     <%= f.file_field :avatar %>
+                                    <!-- <img src="profile-dp.png" width="81" height="101" /> -->
 
                                  <%= f.submit "Submit Information" ,:class => "button-account-submit",:style => "margin-top: 50px;"%>
 
@@ -521,8 +535,12 @@ function signupformclose(b)
 function blockopen(c,d){
   document.getElementById(c).style.display="none";
   document.getElementById(d).style.display="block";
+
+
    
 }
+
+
 
 </script>
 
@@ -542,6 +560,119 @@ function blockopen(c,d){
   height: 50px;
 }
 </style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+     $( "#new_temporary_user" ).submit(function( event ) {
+      var ml = $("#temporary_user_email").val();
+      var cml = $("#temporary_user_confirm_email").val();
+
+
+      if(ml != cml){
+        alert( "confirm email should match with email" );
+        event.preventDefault();
+      }
+      if (ml == ""){
+        alert( "please provide valid email" );
+        event.preventDefault();
+      }
+      else if ($("#temporary_user_password").val() == ""){
+        alert( "password should not be blank" );
+        event.preventDefault();
+      }
+      else if($("#temporary_user_password_confirmation").val() == ""){
+          alert( "password confirmation should not be blank" );
+          event.preventDefault();
+      }
+      else if($("#temporary_user_first_name").val() == ""){
+        alert( "first name should not be blank" );
+        event.preventDefault();
+      }
+       else if($("#temporary_user_last_name").val() == ""){
+        alert( "last name should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_position").val() == ""){
+        alert( "position should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_company_name").val() == ""){
+        alert( "company name should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_website").val() == ""){
+        alert( "company website should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_address1").val() == ""){
+        alert( "address1 should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_zipcode").val() == ""){
+        alert( "zipcode should not be blank" );
+        event.preventDefault();
+      }
+
+      else if($("#temporary_user_phone").val() == ""){
+        alert( "phone should not be blank" );
+        event.preventDefault();
+      }
+
+      
+
+
+      });
+
+     $("#temporary_user_zipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        $("#errmsg").html("Digits Only").show().css("color" ,"red");
+               return false;
+       }
+      });
+
+      $("#temporary_user_phone").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        $("#errmsg1").html("Digits Only").show().css("color" ,"red");
+               return false;
+       }
+      });
+
+      $('#temporary_user_email').keyup(function() {
+          $('span.error-keyup-7').remove();
+          var inputVal = $(this).val();
+          var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+          if(!emailReg.test(inputVal)) {
+              $(this).after('<span class="error error-keyup-7">Invalid Email Format.</span>');
+          }
+      });
+
+      $('#temporary_user_first_name').keyup(function() {
+          $('span.error-keyup-7').remove();
+          var inputVal = $(this).val();
+          var nameReg = /^([a-zA-Z]+$)/;
+          if(!nameReg.test(inputVal)) {
+              $(this).after('<span class="error error-keyup-7">Alpabets only.</span>');
+          }
+      });
+
+
+
+      
+
+     
+     
+  });
+</script>
+
 
 
 

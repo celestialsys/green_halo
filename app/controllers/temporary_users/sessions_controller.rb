@@ -12,10 +12,11 @@ class TemporaryUsers::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
-
+  #  def destroy
+  # #   super
+  #    signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+  #  end
+  
   # protected
 
   # You can put the params you want to permit in the empty array.

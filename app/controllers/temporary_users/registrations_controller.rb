@@ -9,29 +9,31 @@ class TemporaryUsers::RegistrationsController < Devise::RegistrationsController
      # end
 
   # POST /resource
-    def create
-       #render :text =>params.inspect and return false
-   #   @temp_user  = TemporaryUser.new(temporary_user_params)
-   #    if @temp_user.save
-   #       redirect_to  admins_confirm_user_path(temporary_user_params)
-   #    else
-   #      render 'new'
-   #    end
-   #   # super do |user|
-   #   #   redirect_to  admins_confirm_user_path(params)
-   #   # end
-   #   # @temp_user = TemporaryUser.new(temporary_user_params)
-   #   # if @temp_user.save
-   #   #   redirect_to 'admins/confirm_user'
-   #   #  else
-   #   #    render :action => 'new'
-   #   #  end
-    end
+   #  def create
+   #     #render :text =>params.inspect and return false
+   # #   @temp_user  = TemporaryUser.new(temporary_user_params)
+   # #    if @temp_user.save
+   # #       redirect_to  admins_confirm_user_path(temporary_user_params)
+   # #    else
+   # #      render 'new'
+   # #    end
+   # #   # super do |user|
+   # #   #   redirect_to  admins_confirm_user_path(params)
+   # #   # end
+   # #   # @temp_user = TemporaryUser.new(temporary_user_params)
+   # #   # if @temp_user.save
+   # #   #   redirect_to 'admins/confirm_user'
+   # #   #  else
+   # #   #    render :action => 'new'
+   # #   #  end
+   #  end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+   #  def edit
+   #    puts "333333333333333333333"
+   #    puts params 
+   # #   #super
+   #  end
 
   # PUT /resource
   # def update
@@ -75,7 +77,7 @@ class TemporaryUsers::RegistrationsController < Devise::RegistrationsController
 
    private
      def temporary_user_params
-       params.require(:temporary_user).permit(:email, :password,:password_confirmation,:first_name,:last_name,:position,:company_name,:website,:address1,:address2,:zipcode,:phone,:to_know,:type_of_plan)
+       params.require(:temporary_user).permit(:email, :password,:password_confirmation,:first_name,:last_name,:position,:company_name,:website,:address1,:address2,:zipcode,:phone,:to_know,:type_of_plan,:avatar,:avatar_content_type)
      end
 
   protected
@@ -88,13 +90,13 @@ class TemporaryUsers::RegistrationsController < Devise::RegistrationsController
 
 
 
-    def after_sign_up_path_for(resource)
-      p 111111111111111111
-      # signed_in_root_path(resource)
-      #redirect_to 'admins/confirm_user'
-      # root_path
+    # def after_sign_up_path_for(resource)
+    #   p 111111111111111111
+    #   # signed_in_root_path(resource)
+    #   #redirect_to 'admins/confirm_user'
+    #   # root_path
 
-    end
+    # end
 
     def after_inactive_sign_up_path_for(resource)
        "/admins/confirm_user?id=#{resource.id}"
@@ -102,6 +104,7 @@ class TemporaryUsers::RegistrationsController < Devise::RegistrationsController
 
 
     def after_update_path_for(resource)
-      signed_in_root_path(resource)
+      #signed_in_root_path(resource)
+      root_path
     end
 end

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protect_from_forgery with: :exception
-  #before_filter :authenticate_temporary_user!
+  #before_action :authenticate_temporary_user!
   #helper_method :resource, :resource_name, :devise_mapping
 
 
@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
 protected
 
 def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:email,:encrypted_password, :confirm_email,:first_name,:last_name, :position,:company_name,:address1, :address2, :phone,:to_know,:type_of_plan,:reset_password_token,:reset_password_sent_at,:remember_created_at, :sign_in_count, :current_sign_in_at,:last_sign_in_at, :current_sign_in_ip,:last_sign_in_ip ,:confirmation_token,:confirmed_at,:confirmation_sent_at,:unconfirmed_email,:password,:password_confirmation)}
+    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:email,:encrypted_password, :confirm_email,:first_name,:last_name, :position,:company_name,:address1, :address2, :phone ,:website,:zipcode,:to_know,:type_of_plan,:avatar,:reset_password_token,:reset_password_sent_at,:remember_created_at, :sign_in_count, :current_sign_in_at,:last_sign_in_at, :current_sign_in_ip,:last_sign_in_ip ,:confirmation_token,:confirmed_at,:confirmation_sent_at,:unconfirmed_email,:password,:password_confirmation)}
 end
 
 

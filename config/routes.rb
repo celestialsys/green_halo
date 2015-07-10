@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :temporary_users , :controllers => { :registrations =>  'temporary_users/registrations'}
+devise_for :temporary_users , :controllers => { :registrations =>  'temporary_users/registrations',:confirmations =>  'temporary_users/confirmations'}
  
  #devise_for :users
 
@@ -17,6 +17,8 @@ devise_scope :temporary_user do
    end
 end
 
+
+
 get 'admins/policies' 
 get 'admins/terms'
  post 'admins/terms'
@@ -29,6 +31,7 @@ get 'admins/terms'
  get 'admins/form'
  #get 'admins/dashboard' => 'admins#dashboard'
  get 'admins/confirm_user' => 'admins#confirm_user'
+ get 'admins/account_confirmed' => 'admins#account_confirmed'
 
 
  
