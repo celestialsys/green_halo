@@ -129,13 +129,13 @@
                         <div class="row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-8">
-                                 <%#=@temporary_user.inspect %>
+                                 <%#=session["temporary_user"].inspect %>
                                 <p class="header">Complete Registration
 
                                 </p>
                                 <p>Please confirm all the following information below are correct. Click back to make changes, otherwise click Confirm to submit your information.</p>
                                 
-                                <p><%#= link_to "Back" ,edit_temporary_user_registration_path(:id => @temporary_user),:style => "color:black;"%></p>
+                                <p><%#= link_to "Back" ,edit_temporary_user_registration_path(:id => session["temporary_user"]),:style => "color:black;"%></p>
                             </div>
                             <div class="col-sm-2"></div>
                         </div>
@@ -143,48 +143,40 @@
                             <div class="col-sm-4"></div>
                             <div class="col-sm-4">
                                 <div id="account-form">
-                                    <%= form_tag(root_path,:method => "get") do -%>
+                                    <%= form_tag(temp_user_path) do -%>
                                         <p class="label">Log In Profile</p>
-                                        <p class="input" style="margin-top: 4px;">Email:&nbsp;&nbsp;<%=@temporary_user.email %></p>
+                                        <p class="input" style="margin-top: 4px;">Email:&nbsp;&nbsp;<%=session["temporary_user"]["email"] %>
+                                        </p>
 
-                                        <p class="input" style="margin-top: 4px;">Confirm Email:&nbsp;&nbsp;<%=@temporary_user.confirm_email %></p>
+                                        <p class="input" style="margin-top: 4px;">Confirm Email:&nbsp;&nbsp;<%=session["temporary_user"]["confirm_email"] %></p>
 
-                                    <p class="input">how you heard about us: &nbsp;&nbsp; <%= @temporary_user.to_know %></p>
+                                        <!--  <p class="input" style="margin-top: 4px;">Password:&nbsp;&nbsp;<%#=session["temporary_user"].password %></p> -->
+
                                    
-                                   <%= link_to  "Confirm Information" ,root_path ,:class => "button-account-submit",:style => "margin-top: 50px;color:black;"%>
+                                  
 
 
-                                        <!-- <p class="input">password:<span>view</span></p>
-                                        <p class="label" style="margin-top: 21px;">&nbsp;</p> -->
+                                    
                                         <br/>
-                                        <p class="label">User Profile</p>
-                                        <p class="input">first name: &nbsp;&nbsp; <%= @temporary_user.first_name %> </p>
-                                        <p class="input">last name:  &nbsp;&nbsp; <%= @temporary_user.last_name %></p>
-                                        <p class="input">position: &nbsp;&nbsp; <%= @temporary_user.position %> </p>
-                                        <p class="input">company name: &nbsp;&nbsp; <%= @temporary_user.company_name %></p>
-                                        <p class="input">company website: &nbsp;&nbsp; <%= @temporary_user.website %></p>
-                                        <p class="input">address 1: &nbsp;&nbsp; <%= @temporary_user.address1 %></p>
-                                        <p class="input">address 2: &nbsp;&nbsp; <%= @temporary_user.address2 %> </p>
-                                        <p class="input">zip code:  &nbsp;&nbsp; <%= @temporary_user.zipcode %></p>
-                                        <p class="input">phone:  &nbsp;&nbsp; <%= @temporary_user.phone %></p>
+                                        <p class="label" style = "margin-top:20px;">User Profile</p>
+                                        <p class="input">first name: &nbsp;&nbsp; <%= session["temporary_user"]["first_name"] %> </p>
+                                        <p class="input">last name:  &nbsp;&nbsp; <%= session["temporary_user"]["last_name"] %></p>
+                                        <p class="input">position: &nbsp;&nbsp; <%= session["temporary_user"]["position"] %> </p>
+                                        <p class="input">company name: &nbsp;&nbsp; <%= session["temporary_user"]["company_name"] %></p>
+                                        <p class="input">company website: &nbsp;&nbsp; <%= session["temporary_user"]["website"] %></p>
+                                        <p class="input">address 1: &nbsp;&nbsp; <%= session["temporary_user"]["address1"] %></p>
+                                        <p class="input">address 2: &nbsp;&nbsp; <%= session["temporary_user"]["address2"] %> </p>
+                                        <p class="input">zip code:  &nbsp;&nbsp; <%= session["temporary_user"]["zipcode"] %></p>
+                                        <p class="input">phone:  &nbsp;&nbsp; <%= session["temporary_user"]["phone"] %></p>
 
-                                        <p class="input">how you heard about us: &nbsp;&nbsp; <%= @temporary_user.to_know %></p>
+                                        <p class="input">how you heard about us: &nbsp;&nbsp; <%= session["temporary_user"]["to_know"] %></p>
                                        
-                                   <%#= link_to  "Confirm Information" ,root_path  ,:class => "button-account-submit",:style => "margin-top: 50px;color : black;"%>
+                               
+                                   <%= submit_tag "Confirm ",:class => "button-account-submit" ,:style => "margin-top: 50px;"%>
 
-                                   <%= submit_tag "Confirm Information",:class => "button-account-submit" ,:style => "margin-top: 50px;"%>
-
-
-
-                                  <!--  <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" /> -->
-
-                                    <!-- <input id="" class="button-account-submit" name="" type="submit" value="Confirm Information" style="margin-top: 50px;" />  -->
                                   <%end%>
-
-                                   <%#= link_to "Back",:class => "button-account-submit1" ,:style => "margin-top: 50px;"%>
-                                  <%#= link_to  "Edit profile"  ,:class => "button-account-submit",:style => "margin-top: 50px;color : red;"%>
-
-                                  <%#= link_to "Edit" ,:style => "color:black;"%>
+                                    <%#=link_to "Back",:back%>
+                                    <%= link_to 'Back', 'javascript:history.go(-1);',:class => "button-account-submit" ,:style => "margin-top: 50px;float: right;",:id => "back_btn" %>
                                 </div>
                             </div>
                             <div class="col-sm-4"></div>
@@ -353,5 +345,17 @@
 <!-- </body> -->
 
 <!-- </html> -->
+
+<style>
+#back_btn{
+   background: #99cc33; border: none; color: #fff; font: normal 24px MyriadProBold; margin: 0; outline: none; padding: 2px 0px 0px 0px; text-align: center; text-shadow: 0px 1px 0px rgba(0, 0, 0, .21); width: 100%; height: 50px;
+    border-radius : 3px;
+    -khtml-border-radius : 3px;
+    -ms-border-radius : 3px;
+    -moz-border-radius : 3px;
+    -o-border-radius : 3px;
+    -webkit-border-radius : 3px;
+}
+</style>
 
 

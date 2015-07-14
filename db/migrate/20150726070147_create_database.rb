@@ -890,21 +890,21 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "tags",     limit: 60,    null: false
   end
 
-  create_table "temporary_users", force: :cascade do |t|
-    t.string   "email",        limit: 64
-    t.string   "first_name",   limit: 64
-    t.string   "last_name",    limit: 64
-    t.string   "company_name", limit: 256
-    t.binary   "address",      limit: 65535
-    t.string   "city",         limit: 128
-    t.string   "state",        limit: 128
-    t.string   "zip",          limit: 64
-    t.string   "phone",        limit: 64
-    t.datetime "date"
-    t.string   "password",     limit: 128
-    t.string   "token",        limit: 128
-    t.string   "status",       limit: 12
-  end
+  # create_table "temporary_users", force: :cascade do |t|
+  #   t.string   "email",        limit: 64
+  #   t.string   "first_name",   limit: 64
+  #   t.string   "last_name",    limit: 64
+  #   t.string   "company_name", limit: 256
+  #   t.binary   "address",      limit: 65535
+  #   t.string   "city",         limit: 128
+  #   t.string   "state",        limit: 128
+  #   t.string   "zip",          limit: 64
+  #   t.string   "phone",        limit: 64
+  #   t.datetime "date"
+  #   t.string   "password",     limit: 128
+  #   t.string   "token",        limit: 128
+  #   t.string   "status",       limit: 12
+  # end
 
   create_table "tickets_access_users", force: :cascade do |t|
     t.string   "name",       limit: 128

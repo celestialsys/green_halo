@@ -1,5 +1,5 @@
 class AddAvatarColumnsToTemporaryUsers < ActiveRecord::Migration
   def change
-  	add_attachment :temporary_users, :avatar
+  	add_attachment :temporary_users, :image
   end
 end

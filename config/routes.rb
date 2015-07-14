@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 devise_for :temporary_users , :controllers => { :registrations =>  'temporary_users/registrations',:confirmations =>  'temporary_users/confirmations'}
- 
- #devise_for :users
+
 
 devise_scope :temporary_user do
 
   
   authenticated do
-    #root  'admins#dashboard', as: :authenticated_root
-    #get 'admins/dashboard' => 'admins#dashboard'
     get 'admins/dashboard' => "admins/dashboard", as: :authenticated_root
   end
 
@@ -17,22 +14,10 @@ devise_scope :temporary_user do
    end
 end
 
-
-
-get 'admins/policies' 
-get 'admins/terms'
- post 'admins/terms'
- post 'admins/auth' 
-#  get 'admins/confirm'
-# post 'admins/confirm'
- get 'admins/addc'
- get 'admins/id'
- post 'admins/addc'
  get 'admins/form'
- #get 'admins/dashboard' => 'admins#dashboard'
  get 'admins/confirm_user' => 'admins#confirm_user'
  get 'admins/account_confirmed' => 'admins#account_confirmed'
-
+ get '/success_confirmation' => 'admins#successful_confirmation'
 
  
 
