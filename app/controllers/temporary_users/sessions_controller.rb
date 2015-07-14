@@ -17,7 +17,11 @@ class TemporaryUsers::SessionsController < Devise::SessionsController
   #    signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
   #  end
   
-  # protected
+   protected
+
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
 
   # You can put the params you want to permit in the empty array.
   # def configure_sign_in_params

@@ -6,7 +6,7 @@ devise_scope :temporary_user do
 
   
   authenticated do
-    get 'admins/dashboard' => "admins/dashboard", as: :authenticated_root
+    get 'admins/dashboard' => 'admins#dashboard', as: :authenticated_root
   end
 
    unauthenticated do

@@ -49,8 +49,8 @@ config.action_mailer.raise_delivery_errors = false
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
-      :user_name            => "",
-      :password             => "",
+      :user_name            => "gogreenhalo@gmail.com",
+      :password             => "root123",
       :authentication       => :plain,
       :enable_starttls_auto => true
   }

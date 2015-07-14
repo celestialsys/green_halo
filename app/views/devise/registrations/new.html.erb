@@ -108,7 +108,8 @@
     <div class="sign-government" id="signup-individual" style="display:block;">
 
         <div class="bread-crumbs" align="left">
-            <span onClick="blockopen('signup-individual','role-selection')">Role Selection</span>
+         <!--  <span onClick="blockopen('signup-individual','role-selection')">Role Selection</span>  -->
+            <span><%= link_to "Role Selection" ,admins_form_path %></span>
         </div>
 
         <div class="form-table-cont" align="center">
@@ -179,7 +180,8 @@
                             <p class="label" style = "margin-top:20px;">Upload Profile Pic</p> 
                                    
                             <%= f.label :image%><br />
-                            <%= image_tag "img/profile-dp.png" , id:"something_else_unique"  %>
+                            <%= image_tag "img/profile-dp.png"  %>
+                            <%= f.file_field :image %>
 
 
                             <%= f.submit "Submit Information" ,:class => "button-account-submit",:style => "margin-top: 50px;"%>

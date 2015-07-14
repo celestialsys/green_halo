@@ -78,7 +78,7 @@ class TemporaryUsers::RegistrationsController < Devise::RegistrationsController
     # end
 
      def after_inactive_sign_up_path_for(resource)
-        "/thankyou"
+        "/success_confirmation"
      end
 
 
