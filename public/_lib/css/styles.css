@@ -337,7 +337,8 @@ body { background: none; margin: 0 !important; padding: 0 !important; word-spaci
 	-webkit-border-radius : 5px;
 }
 
-#main-createaccount a, #main-createaccount a:active, #main-createaccount a:hover, #main-createaccount a:visited { color: #fff; text-decoration: none; } 
+#main-createaccount a, #main-createaccount a:active, #main-createaccount a:hover, #main-createaccount a:visited { color: #fff; text-decoration: none; }
+#main-createaccount a, #main-createaccount a:active, #main-createaccount a:hover, #main-createaccount a:visited { color: #000; text-decoration: none; }
 #main-createaccount span.back-button { background: #9c9c9c; border: none; color: #fff; display: block; font: normal 24px MyriadProBold; line-height: 50px; margin: 0 auto; padding: 2px 0px 0px 0px !important; text-align: center; text-shadow: 0px 1px 0px rgba(0, 0, 0, .21); width: 76% !important; height: 50px !important;
 	border-radius : 3px;
 	-khtml-border-radius : 3px;

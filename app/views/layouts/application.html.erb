@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gh</title>
+  <title>Waste Diversion and Recycling Tracking System - Green Halo - The Leader in Waste Tracking Solution</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= favicon_link_tag 'img/wastetrac-meta-icon.png' %>
   <%#= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
@@ -163,25 +165,11 @@
                 </div>
                 <div class="col-sm-6">
                   <ul>
-                        <li class="nav-home">
-                            <%= link_to "home" , root_path %>
-                        </li>
-
-                        <li>
-                          <span>our</span> <%= link_to "products" ,'#ourproducts' %></li>
-
-                        <li>
-                          <span>what</span>
-                            <%= link_to "we do" ,'#whatwedo' %>
-                         </li>
-
-                         <li>
-                                <span>who</span>
-                                <%= link_to "we are" ,'#whoweare/contact' %>
-                             </li>
-                        <li>
-                           <%= link_to "schedule a demo",'#scheduleademo' %>
-                        </li>
+                    <li class="nav-home"><a href="#home">home</a></li>
+                    <li><a href="#ourproducts"><span>our</span> products</a></li>
+                    <li><a href="#whatwedo"><span>what</span> we do</a></li>
+                    <li><a href="#whoweare/contact"><span>who</span> we are</a></li>
+                    <li><a class="orange" href="#scheduleademo">schedule a demo</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
