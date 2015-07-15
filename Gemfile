@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
  #gem 'devise_security_extension'
  gem "paperclip", "~> 4.2"
 # Use Unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 gem "highcharts-rails", "~> 3.0.0"
 
 # Use Capistrano for deployment
